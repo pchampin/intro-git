@@ -1,0 +1,47 @@
+/**** slide credits ****/
+
+.slides a[rel] p, .slides address, .slides .license {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.slides address, .slides .license {
+    font-size: 80%;
+}
+
+.slides a[rel=license] p {
+    margin-top: 40px;
+}
+
+
+/** misc **/
+
+.highlight pre {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
+.slide.exercice {
+    background-color: lightYellow;
+}
+
+
+/** Admonition symbols **/
+
+.admonition .admonition-title:before {
+    font-size: 150%;
+    font-weight: normal;
+    font-family: FreeSerif, serif;
+}
+
+.hint .admonition-title:before {
+    content: "☝ ";
+}
+
+.note .admonition-title:before {
+    content: "✎ ";
+}
+
+.warning .admonition-title:before {
+    content: "⚠ ";
+}

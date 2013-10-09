@@ -1,0 +1,3 @@
+[submodule "themes/sphinx-sab-theme"]
+	path = themes/sphinx-sab-theme
+	url = git://github.com/pchampin/sphinx-sab-theme
