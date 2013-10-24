@@ -52,8 +52,11 @@ Exemple 1
 
    * la version la plus à jour est-elle ``Rapport.doc`` ou
      ``Rapport_VFinale.doc``\ ?
+   * et si on avait aussi ``Rapport_VFinale1.doc`` et ``Rapport_VFinale2.doc``
+     (expérience vécue) ?
    * les versions n'apparaissent pas dans l'ordre (1.1, 1, 2)
    * la version 2-jd vient elle avant ou après la version 2 ?
+
 
 Exemple 2
 +++++++++
