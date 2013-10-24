@@ -374,9 +374,10 @@ Depuis l'interface graphique
    :class: fill
 
 
-.. slide:: Exercice
-   :level: 3
-   :class: exercice
+.. rst-class:: exercice
+
+Exercice
+````````
 
    * Créer votre projet GIT pour gérer votre CV en HTML
    * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
@@ -500,9 +501,10 @@ que nous étudierons un peu plus tard.
 
 
 
-.. slide:: Exercices
-   :level: 3
-   :class: exercice
+.. rst-class:: exercice
+
+Exercice
+````````
 
    #. Naviguez dans l'historique de votre CV
       en remontant par exemple 1, 5, 30 minutes en arrière.
@@ -867,9 +869,10 @@ Deux méthodes
    $ git merge <branche>
 
 
-.. slide:: Exercice
-   :level: 3
-   :class: exercice
+.. rst-class:: exercice
+
+Exercice
+````````
 
    * Créez dans une branche ``candidature`` une variante de votre CV
      pour répondre à une offre de stage
@@ -1033,10 +1036,10 @@ On peut également décider d'abandonner la fusion :
 
 
     
-.. slide:: Exercice
-   :level: 3
-   :class: exercice
+.. rst-class:: exercice
 
+Exercice
+````````
    Créez un projet contenant un fichier ``conflit.txt``.
    Ajoutez y une branche et tentez de fusionner les deux branches
    après y avoir commité les modifications suivantes :
@@ -1273,9 +1276,10 @@ Créer un dépôt publique
 .. _github: http://github.com/
 
 
-.. slide:: Exercice
-   :level: 3
-   :class: exercice
+.. rst-class:: exercice
+
+Exercice
+````````
 
    .. TODO Exercice?
 
