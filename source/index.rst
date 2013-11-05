@@ -504,7 +504,7 @@ que nous étudierons un peu plus tard.
 .. rst-class:: exercice
 
 Exercice
-````````
+--------
 
    #. Naviguez dans l'historique de votre CV
       en remontant par exemple 1, 5, 30 minutes en arrière.
