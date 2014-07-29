@@ -423,9 +423,12 @@ Résumé des états possibles d'un fichier avec GIT
 Exercice - Préambule
 ````````````````````
 
-Lorsque vous utilisez GIT GUI, il peut être utile de le configurer 
+Lorsque vous utilisez GIT Gui, il peut être utile de le configurer 
  pour préciser votre nom d'utilisateur et votre adresse email, 
  informations utilisées par GIT pour identifier vos commits. 
+
+Pour cela, rendez-vous dans le menu Édition > Options,
+ et renseignez les deux premiers champs (colonne de droite). 
 
  
 .. rst-class:: exercice
@@ -433,9 +436,26 @@ Lorsque vous utilisez GIT GUI, il peut être utile de le configurer
 Exercice
 ````````
 
-   * Créer votre projet GIT pour gérer votre CV en HTML
-   * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
-   * Ajoutez des fichiers (par exemple, une photo, une feuille de style)
+#. Ouvrez GIT Gui et créez un nouveau dépôt. Créez un nouveau répertoire via l'interface de GIT Gui puis observez le contenu du répertoire créé. 
+
+#. Avec un éditeur de texte, créez un fichier texte dans le répertoire, ajoutez du contenu à ce fichier, et sauvegardez-le.
+
+#. Dans l'interface GIT Gui, cliquez sur "Recharger modifs." Observez ce qui se passe. 
+
+#. Entraînez-vous à faire des commits : 
+   modifiez votre fichier texte, et sauvegardez-le,
+   utilisez l'interface de GIT Gui pour faire un commit des modifications,
+   et répétez l'opération plusieurs fois pour bien comprendre le processus. 
+
+#. Ajoutez maintenant quelques fichiers dans votre répertoire (fichiers textes, images, etc.) et assurez-vous de bien commiter ces nouveaux fichiers. 
+
+.. note::
+
+   Il faut observer le .git. S'il n'apparaît pas, veiller à configurer l'explorateur de fichiers pour qu'il affiche es fichiers et dossiers cachés. 
+
+..   * Créer votre projet GIT pour gérer votre CV en HTML
+..   * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
+..   * Ajoutez des fichiers (par exemple, une photo, une feuille de style)
 
 
 .. _naviguer:
@@ -562,14 +582,14 @@ que nous étudierons un peu plus tard.
 Exercices
 ---------
 
-   #. Naviguez dans l'historique de votre CV
+   #. Naviguez dans l'historique de votre dépôt créé précédemment 
       en remontant par exemple 1, 5, 30 minutes en arrière.
 
-   #. Clonez le repository suivant :
+   #. Lancez à nouveau GIT Gui et clonez le repository suivant :
 
    http://champin.net/enseignement/intro-git/historique-images
 
-   et décrivez l'image que contient chacun des commits.
+   Décrivez l'image que contient chacun des commits.
 
    .. note::
 
@@ -929,22 +949,36 @@ Deux méthodes
 Exercice
 ````````
 
-   * Créez dans une branche ``candidature`` une variante de votre CV
-     pour répondre à une offre de stage
+#. Clonez le dépôt suivant :  https://github.com/ameliecordier/tp-cv/
 
-     - (par exemple : changement de la feuille de style,
+#. Visualisez l'historique des modifications sur ce dépôt. 
+
+#. Créez une nouvelle branche appelée "Amazon". 
+
+#. Dans cette branche, modifiez ``CV.txt`` en ajoutant vos compétences en programmation. 
+
+#. Revenez dans la branche master. L'ajout des compétences en programmation est-il toujours visible ?
+
+#. Dans la branche master, modifiez ``CV.txt`` en ajoutant vos compétences en bureautique. 
+
+#. Fusionnez les modifications de la branche Amazon dans la branche master. La fusion s'est-elle bien passée ? A-t-elle donné lieu à un conflit ? 
+
+   .. * Créez dans une branche ``candidature`` une variante de votre CV
+   ..  pour répondre à une offre de stage
+
+   ..  - (par exemple : changement de la feuille de style,
         modifications mineures du texte).
 
-   * Revenez dans la branche ``master`` et complétez votre CV
-     (par exemple, nouvelle expérience professionnelle).
+   .. * Revenez dans la branche ``master`` et complétez votre CV
+   ..   (par exemple, nouvelle expérience professionnelle).
 
-   * Plus tard, vous décidez de candidater à nouveau chez le même employeur ;
-     fusionnez les modifications de ``master`` dans la branche ``candidature``.
+   .. * Plus tard, vous décidez de candidater à nouveau chez le même employeur ;
+   ..  fusionnez les modifications de ``master`` dans la branche ``candidature``.
 
    .. TODO
 
       fournir un projet contenant déjà une base de travail?
-
+      acordier : je pense que c'est fait :)
 
 .. _conflits:
 
@@ -1095,24 +1129,21 @@ On peut également décider d'abandonner la fusion :
 
 Exercice
 ````````
-   Créez un projet contenant un fichier ``conflit.txt``.
-   Ajoutez-y une branche et tentez de fusionner les deux branches
-   après avoir commité les modifications suivantes :
+
+#. Dans la branche master de votre dépôt CV, ajoutez un fichier nommé ``conflit.txt`` contenant le texte suivant : 
     
    .. code-block:: diff
 
-      @branche 1
-      - La première ligne
-      + La première ligne modifiée
-      La deuxième ligne
-      - La troisième ligne
-      + La troisième ligne modifiée
-
-      @branche 2
-      - La première ligne
-      + La première ligne changée
+      La première ligne
       La deuxième ligne
       La troisième ligne
+
+#. Créez une nouvelle branche, modifiez les lignes 1 et 3 du fichier ``conflit.txt`` et commitez vos changements. 
+
+#. Revenez à la branche master, modifiez les lignes 2 et 3 du fichier ``conflit.txt`` et commitez vos changements. 
+
+#. Fusionnez la branche précédente dans la branche master. Que se passe-t-il ? 
+
 
 
 Collaboration
@@ -1337,8 +1368,11 @@ Créer un dépôt publique
 Exercice
 ````````
 
-   .. TODO Exercice?
+   Le meilleur moyen d'expérimenter la collaboration est de travailler avec des collaborateurs !
 
+   Si vous voulez essayer, publiez votre dépôt sur l'espace partagé de votre choix, et demandez à un collègue d'en faire un clone. 
+
+   C'est à vous de fixer les droits sur votre dépôt distant en fonction de ce que vous souhaitez (accessible en lecture seule, ou bien en lecture / écriture). 
 
 Ré-écrire l'histoire
 ====================
@@ -1435,7 +1469,7 @@ Quelques liens
 .. figure:: _static/github.png
    :width: 20%
 
-* Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_!
+* Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_ ainsi que les vidéos très instructives !
 
 
 * Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia_. 
