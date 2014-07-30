@@ -75,7 +75,7 @@ Exemple 2
 Histoires vraies
 ++++++++++++++++
 
-* Après que nous ayons échangé avec un collègue des versions d'un fichier
+* Après que nous avons échangé avec un collègue des versions d'un fichier
   nommées ``X_1.1.doc``, ``X_1.2.doc``, ``X_1.3.doc`` (et ainsi de suite),
 
   il a nommé la version finale ``X_1.0.doc`` ...
@@ -1336,13 +1336,13 @@ Organisation pair-à-pair
 
 .. index:: git init, git remote, git push
 
-Créer un dépôt publique
------------------------
+Créer un dépôt public
+---------------------
 
 * *Git Gui > Dépôt distant > Ajouter...*
 
   - choisir le nom du dépôt distant,
-  - indiquer l'emplacement du dépôt publique à créer,
+  - indiquer l'emplacement du dépôt public à créer,
   - cocher le bouton radio *Initialiser un dépôt distant et pousser*
   - valider en cliquant sur *Ajouter*.
 
