@@ -1,5 +1,6 @@
 .. Introduction à GIT slides file, created by
    hieroglyph-quickstart on Fri Aug  9 13:28:46 2013.
+   Modifié le 28 juillet 2014 par acordier
 
 :tocdepth: 3
 
@@ -39,8 +40,8 @@
 .. role:: del
 
 
-Motivation
-==========
+Motivations
+===========
 
 Exemple 1
 +++++++++
@@ -74,7 +75,7 @@ Exemple 2
 Histoires vraies
 ++++++++++++++++
 
-* Après que nous ayons échangé avec un collègue des versions d'un fichier
+* Après que nous avons échangé avec un collègue des versions d'un fichier
   nommées ``X_1.1.doc``, ``X_1.2.doc``, ``X_1.3.doc`` (et ainsi de suite),
 
   il a nommé la version finale ``X_1.0.doc`` ...
@@ -93,7 +94,7 @@ Conclusion
 
 * Laissons cela à l'ordinateur,
 
-  - et concentrons nous sur la partie du travail
+  - et concentrons-nous sur la partie du travail
     où nous sommes meilleurs que l'ordinateur.
 
 → |VCS| (`Version Control System`:eng:)
@@ -101,13 +102,17 @@ Conclusion
 Avertissement
 -------------
 
-* GIT est un outil extrêmement riche ;
+* GIT (se prononce « guit ») est un outil extrêmement riche ;
 
   - nous n'en verrons qu'une partie dans ce module.
 
 * Ne vous laissez pas effrayer par l'interface « touffue » ;
 
-  - faites confiances aux réglages par défaut.
+  - faites confiances aux réglages par défaut (dans un premier temps).
+
+
+.. figure:: _static/logogit.png
+   :width: 20%
 
 
 
@@ -117,13 +122,13 @@ Historique des |VCS|
 Origines
 ++++++++
 
-* initialement dédiés à la gestion de code source pour les projets logiciels
-* mais également
+* Initialement dédiés à la gestion de code source pour les projets logiciels
+* mais également :
 
   - documentation
   - site web
 
-* travail collaboratif
+* travail collaboratif :
 
   - facilité d'échange
   - traçabilité
@@ -134,18 +139,22 @@ Origines
 
 **Systèmes centralisés**
 
-* CVS (Concurrent Versioning System)
-* SVN (Subversion)
+* CVS_ (Concurrent Versioning System, vieillissant)
+* SVN_ (Subversion, très populaire, mais c'est en train de changer)
 
 **Systèmes décentralisés**
 
 * GIT_
-* Mercurial (Hg)
-* Bazaar (bzr)
+* Mercurial_ (Hg)
+* Bazaar_ (bzr)
 
 → facilitent une utilisation individuelle
 
+.. _CVS: http://savannah.nongnu.org/projects/cvs/
+.. _SVN: https://subversion.apache.org/
 .. _GIT: http://git-scm.com/
+.. _Mercurial: http://mercurial.selenic.com/
+.. _Bazaar: http://bazaar.canonical.com/en/
 
 Notions de base
 ===============
@@ -160,6 +169,16 @@ Bon exemple
 
    Le répertoire ``.git`` est un répertoire caché,
    qui contient tout l'historique des fichiers.
+
+Les avantages de la gestion de versions
++++++++++++++++++++++++++++++++++++++++
+
+* Sauvegarde (modulo la synchronisation avec un serveur distant)
+* Conservation de l'historique (nominatif) des fichiers (qui a fait quoi ?)
+* Possibilité de retour en arrière
+* Fusion des modifications lors du travail collaboratif
+* Visualiser les changements au cours du temps
+
 
 Notions
 +++++++
@@ -212,9 +231,9 @@ Illustration
    :width: 100%
 
    Visualisation d'un historique simple
-   dans la GUI GIT de Windows
+   dans un outil graphique.
 
-NB: on ignore pour l'instant le rectangle ``master``\ ;
+NB : on ignore pour l'instant le rectangle ``master``\ ;
 on l'expliquera par la suite.
 
 Remarque
@@ -249,7 +268,7 @@ Index
 -----
 
 L'index est un espace temporaire contenant les modifications
-prêtes à êtres « commitées ».
+prêtes à être « commitées ».
 
 Ces modifications peuvent être :
 
@@ -290,15 +309,15 @@ Création du dépôt
 Initialise la gestion de version dans un répertoire
 en créant le sous-répertoire ``.git``.
 
-Trois méthodes :
+Trois méthodes :
 
 * *Git Gui > Créer un nouveau dépôt*
 * option *Git Init Here* du menu contextuel\ `*`:sup:
-* ligne de commande\ `*`:sup:\ ::
+* ligne de commande\ `*`:sup:\ ::
 
   $ git init
 
-`*`:sup:\ : depuis le répertoire concerné
+`*`:sup:\ : depuis le répertoire concerné
 
 
 .. index:: commiter
@@ -308,6 +327,19 @@ Commiter des modifications
 
 Une fois les fichiers modifiés et dans un état satisfaisant,
 vous pouvez les commiter.
+
+Remarque : lorsque vous effectuez un commit, il est essentiel
+ d'écrire un message accompagnant le commit. Ce message doit  
+ être informatif quant à la nature des modifications que vous 
+ êtes en train de commiter. 
+
+Par exemple, *blip* est un **mauvais** message de commit, mais 
+ *Correction des fautes d'orthographe dans la doc technique* 
+ est un **bon** message de commit. 
+
+Notez qu'en cas de problème, il est possible de corriger un commit
+ (tant qu'il n'a pas été partagé avec d'autres collaborateurs), 
+ mais nous étudierons cela plus tard. 
 
 Depuis l'interface graphique
 ````````````````````````````
@@ -325,20 +357,20 @@ Depuis l'interface graphique
 En ligne de commande
 ````````````````````
 
-Ajouter un fichier dans l'index ::
+Ajouter un fichier dans l'index ::
 
   $ git add <filename>
 
-Retirer un fichier de l'index ::
+Retirer un fichier de l'index ::
 
   $ git reset <filename>
 
-Pour voir l'état des modifications en cours ::
+Pour voir l'état des modifications en cours ::
 
   $ git status    # résumé (volet de gauche de Git Gui)
   $ git diff      # détail (volet de droite de Git Gui)
 
-Pour commiter les modifications indexées ::
+Pour commiter les modifications indexées ::
 
   $ git commit    #ou
   $ git commit -m "message de commit"
@@ -353,15 +385,15 @@ Consulter l'historique
 
   (cf. figure suivante)
 
-* ligne de commande :
+* ligne de commande :
 
-  - afficher la liste des commits ::
+  - afficher la liste des commits ::
 
       $ git log
 
     (avec l'identifiant de chaque commit)
 
-  - afficher le détail d'un commit particulier ::
+  - afficher le détail d'un commit particulier ::
 
       $ git show <id-commit>
 
@@ -374,17 +406,61 @@ Depuis l'interface graphique
    :class: fill
 
 
+
+Résumé des états possibles d'un fichier avec GIT
+------------------------------------------------
+
+.. figure:: _static/git-states.png
+   :width: 50%
+
+   Figure empruntée à git-scm.org_.
+
+.. _git-scm.org: http://git-scm.com/
+
+
+.. rst-class:: exercice
+
+Exercice - Préambule
+````````````````````
+
+Lorsque vous utilisez GIT Gui, il peut être utile de le configurer 
+ pour préciser votre nom d'utilisateur et votre adresse email, 
+ informations utilisées par GIT pour identifier vos commits. 
+
+Pour cela, rendez-vous dans le menu Édition > Options,
+ et renseignez les deux premiers champs (colonne de droite). 
+
+ 
 .. rst-class:: exercice
 
 Exercice
 ````````
 
-   * Créer votre projet GIT pour gérer votre CV en HTML
-   * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
-   * Ajoutez des fichiers (par exemple, une photo, une feuille de style)
+#. Ouvrez GIT Gui et créez un nouveau dépôt. Créez un nouveau répertoire via l'interface de GIT Gui puis observez le contenu du répertoire créé. 
+
+#. Avec un éditeur de texte, créez un fichier texte dans le répertoire, ajoutez du contenu à ce fichier, et sauvegardez-le.
+
+#. Dans l'interface GIT Gui, cliquez sur "Recharger modifs." Observez ce qui se passe. 
+
+#. Entraînez-vous à faire des commits : 
+   modifiez votre fichier texte, et sauvegardez-le,
+   utilisez l'interface de GIT Gui pour faire un commit des modifications,
+   et répétez l'opération plusieurs fois pour bien comprendre le processus. 
+
+#. Ajoutez maintenant quelques fichiers dans votre répertoire (fichiers textes, images, etc.) et assurez-vous de bien commiter ces nouveaux fichiers. 
+
+.. note::
+
+   Il faut observer le .git. S'il n'apparaît pas, veiller à configurer l'explorateur de fichiers pour qu'il affiche es fichiers et dossiers cachés. 
+
+..   * Créer votre projet GIT pour gérer votre CV en HTML
+..   * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
+..   * Ajoutez des fichiers (par exemple, une photo, une feuille de style)
 
 
 .. _naviguer:
+
+
 
 Naviguer dans l'historique
 ==========================
@@ -452,7 +528,7 @@ Exemple ::
 Relatif
 -------
 
-``HEAD~`` ou ``HEAD~1`` désignent le parent du commit courrant.
+``HEAD~`` ou ``HEAD~1`` désignent le parent du commit courant.
 Ainsi ::
 
   $ git checkout HEAD~
@@ -465,7 +541,7 @@ et ainsi de suite.
 Date
 ----
 
-``@{<date>}`` désigne l'état du dépot à la date donnée,
+``@{<date>}`` désigne l'état du dépôt à la date donnée,
 qui peut être exprimée de multiples manières ::
 
   $ git checkout "@{9:00}"                # ce matin à 9h
@@ -475,7 +551,7 @@ qui peut être exprimée de multiples manières ::
 
 .. note::
 
-   Les dates portent sur l'état du dépot local,
+   Les dates portent sur l'état du dépôt local,
    *pas* sur les dates des commits.
 
    Du coup, il n'est pas possible avec cette notation
@@ -502,37 +578,36 @@ que nous étudierons un peu plus tard.
 
 
 .. rst-class:: exercice
+ 
+Exercices
+---------
 
-Exercice
---------
-
-   #. Naviguez dans l'historique de votre CV
+   #. Naviguez dans l'historique de votre dépôt créé précédemment 
       en remontant par exemple 1, 5, 30 minutes en arrière.
 
-   #. Clonez le repository suivant :
+   #. Lancez à nouveau GIT Gui et clonez le repository suivant :
 
    http://champin.net/enseignement/intro-git/historique-images
 
-   et décrivez l'image que contient chacun des commits.
+   Décrivez l'image que contient chacun des commits.
 
    .. note::
 
-      On verre plus tard en détail la notion de clonage.
-
-      On remarque aussi que les 
+      On verra plus tard en détail la notion de clonage.
 
 
 
-Entre-actes
+
+Entractes
 +++++++++++
 
-Nous venons de voir les fonctionalités les plus basiques de GIT,
+Nous venons de voir les fonctionnalités les plus basiques de GIT,
 qui permettent de gérer `efficacement`:del: correctement
 l'historique d'un ensemble de fichiers
 → à utiliser *sans modération*.
 
-Dans la suite, nous allons étudier des fonctionalités un peu plus avancées,
-qui seraient inenvisageables avec une gestion « manuelle » de l'historique.
+Dans la suite, nous allons étudier des fonctionnalités un peu plus avancées,
+qui seraient in-envisageables avec une gestion « manuelle » de l'historique.
 
   - elle peuvent donc vous sembler superflues,
   - mais s'avèrent vite indispensables quand on y a pris goût.
@@ -560,7 +635,7 @@ Ces versions peuvent parfois converger à nouveau (mais pas forcément).
 Exemple 1 : CV
 --------------
 
-Pour un CV, on souhaite avoir
+Pour un CV, on souhaite avoir :
 
 * une version « maître » que l'on maintient à jour,
 * des variantes pour chaque demande d'emploi,
@@ -583,7 +658,7 @@ Illustration
 Exemple 2 : site web
 --------------------
 
-Pour un site web, on souhaite avoir
+Pour un site web, on souhaite avoir :
 
 * la version publiée,
 * une version de travail,
@@ -609,14 +684,14 @@ Illustration
 Exemple 3 : logiciel
 --------------------
 
-Dans un projet logiciel, on souhaite avoir
+Dans un projet logiciel, on souhaite avoir :
 
 * la version stable, dans laquelle on se contente de corriger des bugs, et
 * une ou plusieurs versions expérimentales,
-  dans lesquelles on implémente de nouvelles fonctionalités ;
+  dans lesquelles on implémente de nouvelles fonctionnalités ;
 
 Une fois au point,
-chaque nouvelle fonctionalité est intégrée à la version stable.
+chaque nouvelle fonctionnalités est intégrée à la version stable.
 
 Illustration
 ````````````
@@ -654,10 +729,10 @@ En temps normal :
 
 .. index:: accessible
 
-Accessiblité
-------------
+Accessibilité
+-------------
 
-Un commit est **accessible** si il appartient à une branche. Les commits non accessibles sont automatiquement supprimés par GIT.
+Un commit est **accessible** s'il appartient à une branche. Les commits non accessibles sont automatiquement supprimés par GIT.
 
 .. note::
 
@@ -724,7 +799,7 @@ Depuis l'interface graphique
 En ligne de commande
 ````````````````````
 
-Pour créer une nouvelle branche sur le commit courrant ::
+Pour créer une nouvelle branche sur le commit courant ::
 
   $ git branch <nom_nouvelle_branche>
 
@@ -765,7 +840,7 @@ Trois méthodes
   - valider en cliquant sur *Charger (checkout)*.
 
 * Depuis la vue historique, menu contextuel sur une branche :
-  *Récuperer cette branche*
+  *Récupérer cette branche*
 
 * En ligne de commande ::
 
@@ -776,7 +851,7 @@ Trois méthodes
 
 À propos de ``git checkout``
 ````````````````````````````
-
+ 
 La commande ``git checkout`` est utilisée dans divers contextes,
 qui rendent difficile à percevoir sa cohérence interne.
 
@@ -861,7 +936,7 @@ Deux méthodes
 * Git Gui > Fusionner > Fusion locale...*
 
   - cocher le bouton radio *Branche locale*,
-  - sélectionner la branche à fusionner dans la branche actuelle
+  - sélectionner la branche à fusionner dans la branche actuelle,
   - valider en cliquant sur *Fusionner*.
 
 * En ligne de commande ::
@@ -874,22 +949,36 @@ Deux méthodes
 Exercice
 ````````
 
-   * Créez dans une branche ``candidature`` une variante de votre CV
-     pour répondre à une offre de stage
+#. Clonez le dépôt suivant :  https://github.com/ameliecordier/tp-cv/
 
-     - (par exemple : changement de la feuille de style,
+#. Visualisez l'historique des modifications sur ce dépôt. 
+
+#. Créez une nouvelle branche appelée "Amazon". 
+
+#. Dans cette branche, modifiez ``CV.txt`` en ajoutant vos compétences en programmation. 
+
+#. Revenez dans la branche master. L'ajout des compétences en programmation est-il toujours visible ?
+
+#. Dans la branche master, modifiez ``CV.txt`` en ajoutant vos compétences en bureautique. 
+
+#. Fusionnez les modifications de la branche Amazon dans la branche master. La fusion s'est-elle bien passée ? A-t-elle donné lieu à un conflit ? 
+
+   .. * Créez dans une branche ``candidature`` une variante de votre CV
+   ..  pour répondre à une offre de stage
+
+   ..  - (par exemple : changement de la feuille de style,
         modifications mineures du texte).
 
-   * Revenez dans la branche ``master`` et complétez votre CV
-     (par exemple, nouvelle expérience professionnelle).
+   .. * Revenez dans la branche ``master`` et complétez votre CV
+   ..   (par exemple, nouvelle expérience professionnelle).
 
-   * Plus tard, vous décidez de candidater à nouveau chez le même employeur ;
-     fusionnez les modifications de ``master`` dans la branche ``candidature``.
+   .. * Plus tard, vous décidez de candidater à nouveau chez le même employeur ;
+   ..  fusionnez les modifications de ``master`` dans la branche ``candidature``.
 
    .. TODO
 
       fournir un projet contenant déjà une base de travail?
-
+      acordier : je pense que c'est fait :)
 
 .. _conflits:
 
@@ -1040,24 +1129,21 @@ On peut également décider d'abandonner la fusion :
 
 Exercice
 ````````
-   Créez un projet contenant un fichier ``conflit.txt``.
-   Ajoutez y une branche et tentez de fusionner les deux branches
-   après y avoir commité les modifications suivantes :
+
+#. Dans la branche master de votre dépôt CV, ajoutez un fichier nommé ``conflit.txt`` contenant le texte suivant : 
     
    .. code-block:: diff
 
-      @branche 1
-      - La première ligne
-      + La première ligne modifiée
-      La deuxième ligne
-      - La troisième ligne
-      + La troisième ligne modifiée
-
-      @branche 2
-      - La première ligne
-      + La première ligne changée
+      La première ligne
       La deuxième ligne
       La troisième ligne
+
+#. Créez une nouvelle branche, modifiez les lignes 1 et 3 du fichier ``conflit.txt`` et commitez vos changements. 
+
+#. Revenez à la branche master, modifiez les lignes 2 et 3 du fichier ``conflit.txt`` et commitez vos changements. 
+
+#. Fusionnez la branche précédente dans la branche master. Que se passe-t-il ? 
+
 
 
 Collaboration
@@ -1073,7 +1159,7 @@ Motivation
   - en détectant les conflits.
 
 * Déjà utiles dans un contexte individuel,
-  ces fonctionalités vont s'avérer primordiales dans un contexte *collectif*.
+  ces fonctionnalités vont s'avérer primordiales dans un contexte *collectif*.
 
 Notions
 +++++++
@@ -1100,7 +1186,7 @@ Dépôt distant
 
 Un dépôt peut être lié à d'autres dépôts dits **distants**
 (en anglais `remote repository`:eng:),
-avec lequel il pourra partager des commits.
+avec lesquels il pourra partager des commits.
 
 Un dépôt distant a un emplacement qui peut être :
 
@@ -1141,7 +1227,7 @@ Mise en œuvre
 Lier à un dépôt distant
 -----------------------
 
-À faire une fois pour toute :
+À faire une fois pour toutes :
 
 * *Git Gui > Dépôt distant > Ajouter...*
 
@@ -1227,9 +1313,10 @@ On peut l'effectuer :
 
   $ git clone <emplacement> <répertoire-destination>
 
+Remarque : le clone peut se faire selon plusieurs protocoles : HTTPS, SSH, etc.
 
-Types de collabotation
-++++++++++++++++++++++
+Types de collaborations
++++++++++++++++++++++++
 
 La flexibilité de GIT permet de multiples formes d'organisation pour le travail collaboratif.
 
@@ -1249,13 +1336,13 @@ Organisation pair-à-pair
 
 .. index:: git init, git remote, git push
 
-Créer un dépôt publique
------------------------
+Créer un dépôt public
+---------------------
 
 * *Git Gui > Dépôt distant > Ajouter...*
 
   - choisir le nom du dépôt distant,
-  - indiquer l'emplacement du dépôt publique à créer,
+  - indiquer l'emplacement du dépôt public à créer,
   - cocher le bouton radio *Initialiser un dépôt distant et pousser*
   - valider en cliquant sur *Ajouter*.
 
@@ -1281,8 +1368,11 @@ Créer un dépôt publique
 Exercice
 ````````
 
-   .. TODO Exercice?
+   Le meilleur moyen d'expérimenter la collaboration est de travailler avec des collaborateurs !
 
+   Si vous voulez essayer, publiez votre dépôt sur l'espace partagé de votre choix, et demandez à un collègue d'en faire un clone. 
+
+   C'est à vous de fixer les droits sur votre dépôt distant en fonction de ce que vous souhaitez (accessible en lecture seule, ou bien en lecture / écriture). 
 
 Ré-écrire l'histoire
 ====================
@@ -1360,8 +1450,47 @@ en re-créant les commits correspondants.
 Une seule méthode
 -----------------
 
-* A priori pas intégré à *Git Gui*
+* À priori pas intégré à *Git Gui*
 
 * En ligne de commande (depuis la branche à « rebaser ») ::
 
   $ git rebase <branche-destination>
+
+
+
+Pour aller plus loin 
+====================
+
+Quelques liens 
+++++++++++++++
+
+* Si vous voulez découvrir github_, n'hésitez pas à visiter le site web et à explorer les projets qui s'y trouvent... C'est une grande source d'inspiration 
+
+.. figure:: _static/github.png
+   :width: 20%
+
+* Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_ ainsi que les vidéos très instructives !
+
+
+* Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia_. 
+
+
+.. _github: http://github.com/
+.. _Wikipedia: http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
+.. _git-scm.org: http://git-scm.com/
+
+Un dernier conseil 
+++++++++++++++++++
+
+
+Rien de tel que la pratique pour maîtriser GIT
+(ou tout autre outil de gestion de version),
+alors n'hésitez pas à utiliser abondamment ces outils, 
+même pour vos petits projets... 
+
+
+
+
+
+
+
