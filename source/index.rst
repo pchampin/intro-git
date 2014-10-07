@@ -9,14 +9,18 @@
 ====================
 
 .. _Pierre-Antoine Champin: http://champin.net/
+.. _Amélie Cordier: http://acordier.net/
 
 .. raw:: html
 
    <!-- NB: using raw:: directive in order to accurately tag metadata -->
 
-     <a rel="author"
+     <p><a rel="author"
            href="http://champin.net/#pa"
-           ><p>Pierre-Antoine Champin</p></a>
+           >Pierre-Antoine Champin</a>,
+        <a rel="author"
+           href="http://acordier.net/"
+           >Amélie Cordier</a></p>
      <address>Département Informatique,
        <a href="http://iut.univ-lyon1.fr/">IUT Lyon 1</a></address>
 
@@ -102,7 +106,7 @@ Conclusion
 Avertissement
 -------------
 
-* GIT (se prononce « guit ») est un outil extrêmement riche ;
+* GIT (se prononce « guite ») est un outil extrêmement riche ;
 
   - nous n'en verrons qu'une partie dans ce module.
 
