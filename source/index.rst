@@ -1468,12 +1468,17 @@ Pour aller plus loin
 Quelques liens 
 ++++++++++++++
 
+* Deux tutoriels graphiques et animés ici__ et là__.
+
+__ http://pcottle.github.io/learnGitBranching/
+__ https://onlywei.github.io/explain-git-with-d3/#
+
+* Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_ ainsi que les vidéos très instructives !
+
 * Si vous voulez découvrir github_, n'hésitez pas à visiter le site web et à explorer les projets qui s'y trouvent... C'est une grande source d'inspiration 
 
 .. figure:: _static/github.png
    :width: 20%
-
-* Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_ ainsi que les vidéos très instructives !
 
 
 * Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia_. 
