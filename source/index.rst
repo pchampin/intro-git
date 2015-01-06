@@ -589,7 +589,8 @@ Exercices
    #. Naviguez dans l'historique de votre dépôt créé précédemment 
       en remontant par exemple 1, 5, 30 minutes en arrière.
 
-   #. Lancez à nouveau GIT Gui et clonez le repository suivant :
+   #. Lancez à nouveau GIT Gui et
+      `clonez <git-clone>`:ref: le repository suivant :
 
    http://champin.net/enseignement/intro-git/historique-images
 
@@ -953,7 +954,8 @@ Deux méthodes
 Exercice
 ````````
 
-#. Clonez le dépôt suivant :  https://github.com/ameliecordier/tp-cv/
+#. `Clonez <git-clone>`:ref: le dépôt suivant : 
+   https://github.com/ameliecordier/tp-cv/
 
 #. Visualisez l'historique des modifications sur ce dépôt. 
 
@@ -1299,6 +1301,7 @@ Publier des commits
 .. hint:: Suppose d'avoir des droits en écriture sur le dépôt distant.
 
 
+.. _git-clone:
 .. index:: git clone, cloner
 
 Cloner un dépôt distant
@@ -1318,6 +1321,17 @@ On peut l'effectuer :
   $ git clone <emplacement> <répertoire-destination>
 
 Remarque : le clone peut se faire selon plusieurs protocoles : HTTPS, SSH, etc.
+
+.. note:: Problème depuis de campus Lyon1
+
+  Si vous rencontrez des problèmes pour cloner un dépôt,
+  cela peut venir d'une mauvaise configuration du *proxy*.
+  Dans ``git bash``, tapez les deux commandes suivantes ::
+
+    git config --global http.global http://proxy.univ-lyon1.fr:3128
+    git config --global https.global https://proxy.univ-lyon1.fr:3128
+
+  puis tentez à nouveau.
 
 Types de collaborations
 +++++++++++++++++++++++
