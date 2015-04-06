@@ -1479,8 +1479,8 @@ Une seule méthode
 Pour aller plus loin 
 ====================
 
-Quelques liens 
-++++++++++++++
+Se documenter
++++++++++++++
 
 * Deux tutoriels graphiques et animés ici__ et là__.
 
@@ -1489,18 +1489,61 @@ __ https://onlywei.github.io/explain-git-with-d3/#
 
 * Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_ ainsi que les vidéos très instructives !
 
-* Si vous voulez découvrir github_, n'hésitez pas à visiter le site web et à explorer les projets qui s'y trouvent... C'est une grande source d'inspiration 
+Collaborer avec GIT
++++++++++++++++++++
 
-.. figure:: _static/github.png
-   :width: 20%
+Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT :
+
+.. list-table::
+   :widths: 1 1 1
+   :class: logos
+
+   *
+    - .. image:: _static/github.png
+         :target: GitHub_
+         :alt: GitHub
+         :height: 2em
+
+    - .. image:: _static/bitbucket-logo-blue.png
+         :target: BitBucket_
+         :alt: BitBucket
+         :height: 2em
+
+    - .. image:: _static/logo-framagit.png
+         :target: Framagit_
+         :alt: Framagit
+         :height: 2em
+
+.. _BitBucket: https://bitbucket.org/
+.. _Framagit: https://git.framasoft.org/
+
+N'hésitez pas à visiter ces sites et à explorer les projets qui s'y trouvent...
+C'est une grande source d'inspiration.
 
 
-* Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia_. 
+
+Autres outils de gestion de version
++++++++++++++++++++++++++++++++++++
+
+* Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia__. 
+
+__ http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
 
 
-.. _github: http://github.com/
-.. _Wikipedia: http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
-.. _git-scm.org: http://git-scm.com/
+.. rubric:: Mercurial
+
+* Mercurial_ (abbrégé Hg) est un gestionnaire de version,
+  notamment utilisé sur la `forge de Lyon1`_ ou BitBucket_.
+
+* Il est similaire à GIT, mais comporte quelques différences
+  (de terminologie notamment).
+
+* Un guide de pour passer de GIT à Mercurial est disponible ici :
+  http://mercurial.selenic.com/wiki/GitConcepts
+  
+.. _forge de Lyon1: http://forge.univ-lyon1.fr/
+
+
 
 Un dernier conseil 
 ++++++++++++++++++

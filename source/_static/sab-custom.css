@@ -45,3 +45,11 @@
 .warning .admonition-title:before {
     content: "⚠ ";
 }
+
+
+/** logo table **/
+
+table.logos td {
+  border: none;
+  text-align: center;
+}
