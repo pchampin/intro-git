@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="470"
+   height="210"
+   viewBox="0 0 470 210"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo-gitlab.svg">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Slice 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="1.5514207"
+     inkscape:cx="123.74002"
+     inkscape:cy="81.096942"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title4">Slice 1</title>
+  <desc
+     id="desc6">Created with Sketch.</desc>
+  <defs
+     id="defs8" />
+  <g
+     id="Page-1"
+     sketch:type="MSPage"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
+    <g
+       id="logo"
+       sketch:type="MSLayerGroup"
+       transform="translate(0,10)">
+      <g
+         id="g12"
+         sketch:type="MSShapeGroup">
+        <g
+           id="Fill-1-+-Group-24">
+          <g
+             id="Group-24">
+            <g
+               id="Group">
+              <path
+                 d="m 105.0614,193.655 0,0 38.64,-118.921 -77.28,0 38.64,118.921 0,0 z"
+                 id="Fill-4"
+                 inkscape:connector-curvature="0"
+                 style="fill:#e24329" />
+              <path
+                 d="m 105.0614,193.6548 -38.64,-118.921 -54.153,0 92.793,118.921 0,0 z"
+                 id="Fill-8"
+                 inkscape:connector-curvature="0"
+                 style="fill:#fc6d26" />
+              <path
+                 d="m 12.2685,74.7341 0,0 -11.742,36.139 c -1.071,3.296 0.102,6.907 2.906,8.944 l 101.629,73.838 -92.793,-118.921 0,0 z"
+                 id="Fill-12"
+                 inkscape:connector-curvature="0"
+                 style="fill:#fca326" />
+              <path
+                 d="m 12.2685,74.7342 54.153,0 -23.273,-71.625 c -1.197,-3.686 -6.411,-3.685 -7.608,0 l -23.272,71.625 0,0 z"
+                 id="Fill-16"
+                 inkscape:connector-curvature="0"
+                 style="fill:#e24329" />
+              <path
+                 d="m 105.0614,193.6548 38.64,-118.921 54.153,0 -92.793,118.921 0,0 z"
+                 id="Fill-18"
+                 inkscape:connector-curvature="0"
+                 style="fill:#fc6d26" />
+              <path
+                 d="m 197.8544,74.7341 0,0 11.742,36.139 c 1.071,3.296 -0.102,6.907 -2.906,8.944 l -101.629,73.838 92.793,-118.921 0,0 z"
+                 id="Fill-20"
+                 inkscape:connector-curvature="0"
+                 style="fill:#fca326" />
+              <path
+                 d="m 197.8544,74.7342 -54.153,0 23.273,-71.625 c 1.197,-3.686 6.411,-3.685 7.608,0 l 23.272,71.625 0,0 z"
+                 id="Fill-22"
+                 inkscape:connector-curvature="0"
+                 style="fill:#e24329" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:14px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="350.34088"
+     y="140.04938"
+     id="text4154"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4156"
+       x="350.34088"
+       y="140.04938"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:82.5px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica Neue, Helvetica, Arial, sans-serif'">GitLab</tspan></text>
+</svg>

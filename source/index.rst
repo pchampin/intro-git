@@ -1495,7 +1495,7 @@ Collaborer avec GIT
 Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT :
 
 .. list-table::
-   :widths: 1 1 1
+   :widths: 1 1
    :class: logos
 
    *
@@ -1508,14 +1508,20 @@ Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT�
          :target: BitBucket_
          :alt: BitBucket
          :height: 2em
+   *
+    - .. image:: _static/logo-gitlab.png
+         :target: GitLab_
+         :alt: GitLab
+         :height: 2em
 
     - .. image:: _static/logo-framagit.png
          :target: Framagit_
          :alt: Framagit
          :height: 2em
-
+                  
 .. _BitBucket: https://bitbucket.org/
 .. _Framagit: https://git.framasoft.org/
+.. _GitLab: https://gitlab.com/
 
 N'hésitez pas à visiter ces sites et à explorer les projets qui s'y trouvent...
 C'est une grande source d'inspiration.
