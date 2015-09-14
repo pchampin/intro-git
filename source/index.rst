@@ -8,21 +8,13 @@
  Introduction à GIT
 ====================
 
-.. _Pierre-Antoine Champin: http://champin.net/
-.. _Amélie Cordier: http://acordier.net/
-
 .. raw:: html
 
    <!-- NB: using raw:: directive in order to accurately tag metadata -->
 
-     <p><a rel="author"
-           href="http://champin.net/#pa"
-           >Pierre-Antoine Champin</a>,
-        <a rel="author"
-           href="http://acordier.net/"
-           >Amélie Cordier</a></p>
-     <address>Département Informatique,
-       <a href="http://iut.univ-lyon1.fr/">IUT Lyon 1</a></address>
+     <a rel="author">Département Informatique
+       (<a href="http://iut.univ-lyon1.fr/">IUT Lyon 1</a>)
+          </a>
 
      <a rel="license"
         href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.en">
@@ -1561,8 +1553,11 @@ alors n'hésitez pas à utiliser abondamment ces outils,
 même pour vos petits projets... 
 
 
+Crédits
+=======
 
+Ce support a été réalisé par `Pierre-Antoine Champin`_ et `Amélie Cordier`_.
 
-
-
+.. _Pierre-Antoine Champin: http://champin.net/
+.. _Amélie Cordier: http://acordier.net/
 
