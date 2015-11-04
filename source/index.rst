@@ -1320,8 +1320,8 @@ Remarque : le clone peut se faire selon plusieurs protocoles : HTTPS, SSH, etc.
   cela peut venir d'une mauvaise configuration du *proxy*.
   Dans ``git bash``, tapez les deux commandes suivantes ::
 
-    git config --global http.global http://proxy.univ-lyon1.fr:3128
-    git config --global https.global https://proxy.univ-lyon1.fr:3128
+    git config --global http.proxy http://proxy.univ-lyon1.fr:3128
+    git config --global https.proxy https://proxy.univ-lyon1.fr:3128
 
   puis tentez à nouveau.
 
