@@ -1510,10 +1510,16 @@ Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT�
          :target: Framagit_
          :alt: Framagit
          :height: 2em
-                  
+
 .. _BitBucket: https://bitbucket.org/
 .. _Framagit: https://git.framasoft.org/
 .. _GitLab: https://gitlab.com/
+
+dont un hébergé par l'IUT :
+
+.. rst-class:: logos
+
+   http://iutdoua-git.univ-lyon1.fr/
 
 N'hésitez pas à visiter ces sites et à explorer les projets qui s'y trouvent...
 C'est une grande source d'inspiration.

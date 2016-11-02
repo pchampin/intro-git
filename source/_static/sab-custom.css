@@ -53,3 +53,7 @@ table.logos td {
   border: none;
   text-align: center;
 }
+
+.slide .logos {
+    text-align: center;
+}
