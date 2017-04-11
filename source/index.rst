@@ -1199,10 +1199,9 @@ Branche de suivi
 
 Pour chaque branche d'un dépôt distant,
 GIT crée dans le dépôt local une branche spéciale appelée **branche de suivi**
-(en anglais `remote-tracking branch`:eng:). Leur nom est de la forme :
+(en anglais `remote-tracking branch`:eng:). Leur nom est de la forme ::
 
-  ``remotes/<dépôt-distant>/<branche>``
-
+  remotes/<dépôt-distant>/<branche>
 
 Cette branche reflète l'état de la branche distante correspondante ;
 elle n'a pas vocation a être modifiée directement.
