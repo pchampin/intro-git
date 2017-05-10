@@ -584,7 +584,7 @@ Exercices
    #. Lancez à nouveau GIT Gui et
       `clonez <git-clone>`:ref: le repository suivant :
 
-   http://champin.net/enseignement/intro-git/historique-images
+   http://liris.cnrs.fr/~pchampin/enseignement/intro-git/historique-images/
 
    Décrivez l'image que contient chacun des commits.
 
