@@ -1542,7 +1542,7 @@ __ http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
   (de terminologie notamment).
 
 * Un guide de pour passer de GIT à Mercurial est disponible ici :
-  http://mercurial.selenic.com/wiki/GitConcepts
+  https://www.mercurial-scm.org/wiki/GitConcepts
   
 .. _forge de Lyon1: http://forge.univ-lyon1.fr/
 
@@ -1565,4 +1565,3 @@ Ce support a été réalisé par `Pierre-Antoine Champin`_ et `Amélie Cordier`_
 
 .. _Pierre-Antoine Champin: http://champin.net/
 .. _Amélie Cordier: http://acordier.net/
-
