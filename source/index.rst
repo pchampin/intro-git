@@ -218,7 +218,7 @@ On parle également de **révision**.
 
   GIT fait une distinction subtile entre `revision`:eng:, `commit`:eng: et
   `commit object`:eng: mais elle n'est pas utile ici.
-  
+
 
 Illustration
 ````````````
@@ -349,7 +349,7 @@ Depuis l'interface graphique
 
    Les commandes pour changer le statut (indexé ou non) des fichiers modifiés
    sont dans le menu *Commit*.
-   
+
 .. index:: git add, git reset, git status, git diff, git commit
 
 En ligne de commande
@@ -435,22 +435,22 @@ informations utilisées par GIT pour identifier vos commits.
 Exercice
 ````````
 
-#. Ouvrez GIT Gui et créez un nouveau dépôt. Créez un nouveau répertoire via l'interface de GIT Gui puis observez le contenu du répertoire créé. 
+#. Ouvrez GIT Gui et créez un nouveau dépôt. Créez un nouveau répertoire via l'interface de GIT Gui puis observez le contenu du répertoire créé.
 
 #. Avec un éditeur de texte, créez un fichier texte dans le répertoire, ajoutez du contenu à ce fichier, et sauvegardez-le.
 
-#. Dans l'interface GIT Gui, cliquez sur "Recharger modifs." Observez ce qui se passe. 
+#. Dans l'interface GIT Gui, cliquez sur "Recharger modifs." Observez ce qui se passe.
 
-#. Entraînez-vous à faire des commits : 
+#. Entraînez-vous à faire des commits :
    modifiez votre fichier texte, et sauvegardez-le,
    utilisez l'interface de GIT Gui pour faire un commit des modifications,
-   et répétez l'opération plusieurs fois pour bien comprendre le processus. 
+   et répétez l'opération plusieurs fois pour bien comprendre le processus.
 
-#. Ajoutez maintenant quelques fichiers dans votre répertoire (fichiers textes, images, etc.) et assurez-vous de bien commiter ces nouveaux fichiers. 
+#. Ajoutez maintenant quelques fichiers dans votre répertoire (fichiers textes, images, etc.) et assurez-vous de bien commiter ces nouveaux fichiers.
 
 .. note::
 
-   Il faut observer le .git. S'il n'apparaît pas, veiller à configurer l'explorateur de fichiers pour qu'il affiche es fichiers et dossiers cachés. 
+   Il faut observer le .git. S'il n'apparaît pas, veiller à configurer l'explorateur de fichiers pour qu'il affiche es fichiers et dossiers cachés.
 
 ..   * Créer votre projet GIT pour gérer votre CV en HTML
 ..   * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
@@ -577,11 +577,11 @@ que nous étudierons un peu plus tard.
 
 
 .. rst-class:: exercice
- 
+
 Exercices
 ---------
 
-   #. Naviguez dans l'historique de votre dépôt créé précédemment 
+   #. Naviguez dans l'historique de votre dépôt créé précédemment
       en remontant par exemple 1, 5, 30 minutes en arrière.
 
    #. Lancez à nouveau GIT Gui et
@@ -851,7 +851,7 @@ Trois méthodes
 
 À propos de ``git checkout``
 ````````````````````````````
- 
+
 La commande ``git checkout`` est utilisée dans divers contextes,
 qui rendent difficile à percevoir sa cohérence interne.
 
@@ -949,20 +949,20 @@ Deux méthodes
 Exercice
 ````````
 
-#. `Clonez <git-clone>`:ref: le dépôt suivant : 
+#. `Clonez <git-clone>`:ref: le dépôt suivant :
    https://github.com/ameliecordier/tp-cv/
 
-#. Visualisez l'historique des modifications sur ce dépôt. 
+#. Visualisez l'historique des modifications sur ce dépôt.
 
-#. Créez une nouvelle branche appelée "Amazon". 
+#. Créez une nouvelle branche appelée "Amazon".
 
-#. Dans cette branche, modifiez ``CV.txt`` en ajoutant vos compétences en programmation. 
+#. Dans cette branche, modifiez ``CV.txt`` en ajoutant vos compétences en programmation.
 
 #. Revenez dans la branche master. L'ajout des compétences en programmation est-il toujours visible ?
 
-#. Dans la branche master, modifiez ``CV.txt`` en ajoutant vos compétences en bureautique. 
+#. Dans la branche master, modifiez ``CV.txt`` en ajoutant vos compétences en bureautique.
 
-#. Fusionnez les modifications de la branche Amazon dans la branche master. La fusion s'est-elle bien passée ? A-t-elle donné lieu à un conflit ? 
+#. Fusionnez les modifications de la branche Amazon dans la branche master. La fusion s'est-elle bien passée ? A-t-elle donné lieu à un conflit ?
 
    .. * Créez dans une branche ``candidature`` une variante de votre CV
    ..  pour répondre à une offre de stage
@@ -1100,50 +1100,50 @@ pour :
    La 3e ligne modifiée
 
 Les fichiers binaires ne sont pas modifiés.
-    
+
 Résolution du conflit
 ---------------------
-    
+
 Une fois les fichiers en conflit corrigés,
 il suffit de faire un commit.
-    
+
 Le nouveau commit aura pour parents les sommets des branches fusionnées.
 
 .. index:: git merge
 
 Abandon
 -------
-    
+
 On peut également décider d'abandonner la fusion :
-    
+
 * *Git Gui > Fusionner > Abandonner fusion...*
-    
+
   - valider en cliquant sur *Oui*.
-    
+
 * En ligne de commande ::
-    
+
   $ git merge --abort
 
 
-    
+
 .. rst-class:: exercice
 
 Exercice
 ````````
 
-#. Dans la branche master de votre dépôt CV, ajoutez un fichier nommé ``conflit.txt`` contenant le texte suivant : 
-    
+#. Dans la branche master de votre dépôt CV, ajoutez un fichier nommé ``conflit.txt`` contenant le texte suivant :
+
    .. code-block:: diff
 
       La première ligne
       La deuxième ligne
       La troisième ligne
 
-#. Créez une nouvelle branche, modifiez les lignes 1 et 3 du fichier ``conflit.txt`` et commitez vos changements. 
+#. Créez une nouvelle branche, modifiez les lignes 1 et 3 du fichier ``conflit.txt`` et commitez vos changements.
 
-#. Revenez à la branche master, modifiez les lignes 2 et 3 du fichier ``conflit.txt`` et commitez vos changements. 
+#. Revenez à la branche master, modifiez les lignes 2 et 3 du fichier ``conflit.txt`` et commitez vos changements.
 
-#. Fusionnez la branche précédente dans la branche master. Que se passe-t-il ? 
+#. Fusionnez la branche précédente dans la branche master. Que se passe-t-il ?
 
 
 
@@ -1316,7 +1316,7 @@ On peut l'effectuer :
 
 Remarque : le clone peut se faire selon plusieurs protocoles : HTTPS, SSH, etc.
 
-.. note:: Problème depuis de campus Lyon1
+.. note:: Problème depuis le campus Lyon1
 
   Si vous rencontrez des problèmes pour cloner un dépôt,
   cela peut venir d'une mauvaise configuration du *proxy*.
@@ -1382,9 +1382,9 @@ Exercice
 
    Le meilleur moyen d'expérimenter la collaboration est de travailler avec des collaborateurs !
 
-   Si vous voulez essayer, publiez votre dépôt sur l'espace partagé de votre choix, et demandez à un collègue d'en faire un clone. 
+   Si vous voulez essayer, publiez votre dépôt sur l'espace partagé de votre choix, et demandez à un collègue d'en faire un clone.
 
-   C'est à vous de fixer les droits sur votre dépôt distant en fonction de ce que vous souhaitez (accessible en lecture seule, ou bien en lecture / écriture). 
+   C'est à vous de fixer les droits sur votre dépôt distant en fonction de ce que vous souhaitez (accessible en lecture seule, ou bien en lecture / écriture).
 
 Ré-écrire l'histoire
 ====================
@@ -1470,7 +1470,7 @@ Une seule méthode
 
 
 
-Pour aller plus loin 
+Pour aller plus loin
 ====================
 
 Se documenter
@@ -1531,7 +1531,7 @@ C'est une grande source d'inspiration.
 Autres outils de gestion de version
 +++++++++++++++++++++++++++++++++++
 
-* Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia__. 
+* Vous n'êtes pas certains de préférer GIT_? Prenez le temps de comparer les différents outils de gestion de version. Il existe de nombreux comparatifs en ligne, comme par exemple sur Wikipedia__.
 
 __ http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
 
@@ -1546,19 +1546,19 @@ __ http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
 
 * Un guide de pour passer de GIT à Mercurial est disponible ici :
   https://www.mercurial-scm.org/wiki/GitConcepts
-  
+
 .. _forge de Lyon1: http://forge.univ-lyon1.fr/
 
 
 
-Un dernier conseil 
+Un dernier conseil
 ++++++++++++++++++
 
 
 Rien de tel que la pratique pour maîtriser GIT
 (ou tout autre outil de gestion de version),
-alors n'hésitez pas à utiliser abondamment ces outils, 
-même pour vos petits projets... 
+alors n'hésitez pas à utiliser abondamment ces outils,
+même pour vos petits projets...
 
 
 Crédits
