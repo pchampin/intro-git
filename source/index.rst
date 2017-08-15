@@ -193,8 +193,8 @@ Le répertoire caché ``.git`` est nommé **dépôt**
 (en anglais :eng:`repository`).
 
 Il contient toutes les données dont GIT a besoin pour gérer l'historique.
-Sauf rare exception, vous ne devez pas modifier son contenu directement,
-mais uniquement à travers les commandes GIT.
+Sauf rarissimes exceptions, vous ne modifierez jamais son contenu directement,
+mais uniquement en passant par les commandes GIT.
 
 .. index:: commit, révision
 
@@ -324,18 +324,20 @@ Commiter des modifications
 Une fois les fichiers modifiés et dans un état satisfaisant,
 vous pouvez les commiter.
 
-Remarque : lorsque vous effectuez un commit, il est essentiel
- d'écrire un message accompagnant le commit. Ce message doit  
- être informatif quant à la nature des modifications que vous 
- êtes en train de commiter. 
+Remarque : lorsque vous effectuez un commit, il est essentiel
+d'écrire un message accompagnant le commit. Ce message doit
+être informatif quant à la nature des modifications que vous
+êtes en train de commiter.
 
-Par exemple, *blip* est un **mauvais** message de commit, mais 
- *Correction des fautes d'orthographe dans la doc technique* 
- est un **bon** message de commit. 
+Par exemple, *blip* est un **mauvais** message de commit, mais
+*Correction des fautes d'orthographe dans la doc technique*
+est un **bon** message de commit.
 
-Notez qu'en cas de problème, il est possible de corriger un commit
- (tant qu'il n'a pas été partagé avec d'autres collaborateurs), 
- mais nous étudierons cela plus tard. 
+.. note::
+
+   En cas de problème, il est possible de corriger un commit
+   (tant qu'il n'a pas été partagé avec d'autres collaborateurs),
+   mais nous étudierons cela plus tard.
 
 Depuis l'interface graphique
 ````````````````````````````
@@ -419,14 +421,15 @@ Résumé des états possibles d'un fichier avec GIT
 Exercice - Préambule
 ````````````````````
 
-Lorsque vous utilisez GIT Gui, il peut être utile de le configurer 
- pour préciser votre nom d'utilisateur et votre adresse email, 
- informations utilisées par GIT pour identifier vos commits. 
+Lorsque vous utilisez GIT pour la première fois sur une machine,
+il peut être nécessaire de le configurer pour préciser votre nom d'utilisateur et votre adresse email,
+informations utilisées par GIT pour identifier vos commits.
 
-Pour cela, rendez-vous dans le menu Édition > Options,
- et renseignez les deux premiers champs (colonne de droite). 
+* En ligne de commande : les instructions vous seront données au moment nécessaire.
+* Dans GIT Gui, rendez-vous dans le menu Édition > Options,
+  et renseignez les deux premiers champs (colonne de droite).
 
- 
+
 .. rst-class:: exercice
 
 Exercice
