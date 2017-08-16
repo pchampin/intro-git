@@ -573,7 +573,7 @@ Exercice
 
 #. Affichez ensuite la première version de votre fichier HTML.
 
-#. Revenez au "présent" (*i.e.* la dernière version).
+#. Revenez au « présent » (*i.e.* la dernière version).
 
 
 Entractes
@@ -852,20 +852,20 @@ Exercice
 --------
 
 #. Dans le dépôt que vous avez créé au premier exercice,
-   créez une branche nommée "style", et placez vous dans cette branche.
+   créez une branche nommée ``style``, et placez vous dans cette branche.
 
 #. Modifiez la feuille de style (par exemple pour changer la couleur de fond)
    et commitez vos changements.
 
-#. Revenez sur la branche "master".
+#. Revenez sur la branche ``master``.
    Constatez que vos changements de style ont disparu (pour l'instant).
 
-#. Dans la branche "master",
+#. Dans la branche ``master``,
    modifiez ou ajouter du contenu au fichier HTML,
    et commitez vos modifications.
 
-#. Revenez sur la branche "style".
-   Constatez que vos changements de style ont réaparru,
+#. Revenez sur la branche ``style``.
+   Constatez que vos changements de style ont réapparu,
    mais que vos dernière modification dans le fichier HTML ont, elle, disparu.
 
 #. Modifiez à nouveau la feuille de style (par exemple pour changer la police)
@@ -957,14 +957,14 @@ Mise en œuvre
 Exercice
 ````````
 
-#. Nous allons maintenant fusionner la branche "style"
+#. Nous allons maintenant fusionner la branche ``style``
    (créée à l'exercice précédent)
-   avec la branche master.
+   avec la branche ``master``.
 
-#. Placez-vous dans la branche "master",
+#. Placez-vous dans la branche ``master``,
    et appliquez la méthode de votre choix
    (ligne de commande ou GUI)
-   pour y fusionner la granche "style".
+   pour y fusionner la granche ``style``.
 
 #. Constatez que toutes vos modifications (contenu HTML et style)
    sont maintenant visibles.
@@ -985,7 +985,7 @@ La fusion de branches est automatiquement gérée par GIT lorsque
 les modifications des deux branches portent sur :
 
 * des fichiers différents, ou
-* des partie distinctes des mêmes fichiers texte.
+* des parties distinctes des mêmes fichiers texte.
 
 Exemple géré par GIT
 --------------------
