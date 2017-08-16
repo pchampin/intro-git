@@ -682,8 +682,18 @@ Illustration
 Notions
 +++++++
 
-Une **branche** est la *lignée* (généalogique) d'un commit particulier,
-appelé le sommet (en anglais `tip`:eng:) de cette branche.
+* Une **branche** est la *lignée* (généalogique) de commits,
+  à laquelle on a donné un nom.
+
+* Le commit le plus récent de la branche est appelé *sommet*
+  (en anglais `tip`:eng:) de cette branche.
+
+* La copie de travail est (en général) liée au sommet d'une branche
+  (``master`` par défaut).
+
+* À chaque nouveau commit,
+  le sommet de la branche courante est avancé vers ce nouveau commit
+  (la branche « pousse »).
 
 .. note::
 
@@ -692,25 +702,19 @@ appelé le sommet (en anglais `tip`:eng:) de cette branche.
 
    Dans le cas simple, cette lignée a une structure linéaire,
    mais ce n'est pas toujours le cas
-   (comme en témoignent dans les illustrations ci-avant
+   (comme en témoignent, dans les illustrations ci-avant,
    la branche ``publié`` dans l'`exemple du site web <exemple-siteweb>`:ref:
    et la branche ``master`` dans
    l'`exemple du logiciel <exemple-logiciel>`:ref:).
 
-En temps normal :
-
-* la copie de travail est synchronisée avec le sommet d'une branche
-  (``master`` par défaut),
-
-* à chaque nouveau commit,
-  le sommet de la branche courante est avancé vers ce nouveau commit.
 
 .. index:: accessible
 
 Accessibilité
 -------------
 
-Un commit est **accessible** s'il appartient à une branche. Les commits non accessibles sont automatiquement supprimés par GIT.
+Un commit est **accessible** s'il appartient à au moins une branche.
+Les commits non accessibles sont automatiquement supprimés par GIT.
 
 .. note::
 
