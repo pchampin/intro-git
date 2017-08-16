@@ -534,24 +534,6 @@ permet de remonter d'un commit dans l'historique.
 NB : ``HEAD~2`` remonte de deux commits, ``HEAD~3`` de trois commits,
 et ainsi de suite.
 
-Date
-----
-
-``@{<date>}`` désigne l'état du dépôt à la date donnée,
-qui peut être exprimée de multiples manières ::
-
-  $ git checkout "@{9:00}"                # ce matin à 9h
-  $ git checkout "@{yesteday}"            # hier à 00:00
-  $ git checkout "@{3 days ago}"          # il y a 3 jours
-  $ git checkout "@{2013-08-15 12:00}"    # le 15 août à midi
-
-.. note::
-
-   Les dates portent sur l'état du dépôt local,
-   *pas* sur les dates des commits.
-
-   Du coup, il n'est pas possible avec cette notation
-   de naviguer dans un historique *importé* depuis un dépôt distant.
 
 .. index:: git checkout
 
