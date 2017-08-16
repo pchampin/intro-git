@@ -578,7 +578,7 @@ Exercices
 
 
 Entractes
-+++++++++++
++++++++++
 
 Nous venons de voir les fonctionnalités les plus basiques de GIT,
 qui permettent de gérer `efficacement`:del: correctement
@@ -586,7 +586,7 @@ l'historique d'un ensemble de fichiers
 → à utiliser *sans modération*.
 
 Dans la suite, nous allons étudier des fonctionnalités un peu plus avancées,
-qui seraient in-envisageables avec une gestion « manuelle » de l'historique.
+qui seraient impraticables avec une gestion « manuelle » de l'historique.
 
   - elle peuvent donc vous sembler superflues,
   - mais s'avèrent vite indispensables quand on y a pris goût.
