@@ -503,10 +503,10 @@ Il existe plusieurs méthodes pour spécifier une révision à GIT :
 
 (liste non exhaustive)
 
-Identificateur
---------------
+Identifiant
+-----------
 
-Chaque commit a un identificateur, affiché
+Chaque commit a un identifiant, affiché
 
   - par l'interface graphique (cf. `figure <gui-log>`:ref:),
   - par la commande ``git log``.
@@ -514,7 +514,7 @@ Chaque commit a un identificateur, affiché
 On peut spécifier une révision en utilisant
 
   - l'identifiant complet du commit, ou
-  - un préfixe non ambigu de cet identifiant.
+  - les premiers caractères de l'identifiant, tant qu'il n'y a pas d'ambiguïté
 
 Exemple ::
 
