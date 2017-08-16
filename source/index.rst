@@ -285,17 +285,32 @@ Ces modifications peuvent être :
    * jaune : commit courant (HEAD)
    * bleu :  autres commits
 
+   NB: la sémantique du rouge et du vert est la même pour la ligne de commande.
+   Cependant, certains outils GIT ne respectent pas ce code couleur;
+   c'est notamment le cas de TortoiseGit que nous allons utiliser par la suite.
+
 
 Mise en œuvre
 +++++++++++++
 
-Deux méthodes possibles :
+Dans ce cours, nous considérerons deux méthodes possibles :
 
-* Interface graphique (Git Gui)
 * Ligne de commande (Git Bash)
+* Interface graphique (TortoiseGit)
 
 .. figure:: _static/popup_menu.png
    :width: 35%
+
+.. note::
+
+  Il existe d'autres interfaces graphiques pour GIT,
+  notamment ``Git Gui`` qui est installé sur les machines de l'IUT,
+  mais que nous ne présenterons pas dans ce cours.
+
+  De plus,
+  la plupart des IDE fournissent un accès aux commendes GIT,
+  mais nous ne les traiterons pas non plus.
+
 
 .. index:: git init
 
@@ -305,15 +320,13 @@ Création du dépôt
 Initialise la gestion de version dans un répertoire
 en créant le sous-répertoire ``.git``.
 
-Trois méthodes :
+Mise en œuvre :
 
-* *Git Gui > Créer un nouveau dépôt*
-* option *Git Init Here* du menu contextuel\ `*`:sup:
-* ligne de commande\ `*`:sup:\ ::
+* Dans le menu contextuel du répertoire concerné,
+  *Git Create repository here...*
+* En ligne de commande, depuis le répertoire concerné::
 
   $ git init
-
-`*`:sup:\ : depuis le répertoire concerné
 
 
 .. index:: commiter
@@ -345,10 +358,6 @@ Depuis l'interface graphique
 .. figure:: _static/gui-commit-annot.*
    :class: fill
 
-.. note::
-
-   Les commandes pour changer le statut (indexé ou non) des fichiers modifiés
-   sont dans le menu *Commit*.
 
 .. index:: git add, git reset, git status, git diff, git commit
 
@@ -365,8 +374,8 @@ Retirer un fichier de l'index ::
 
 Pour voir l'état des modifications en cours ::
 
-  $ git status    # résumé (volet de gauche de Git Gui)
-  $ git diff      # détail (volet de droite de Git Gui)
+  $ git status    # résumé
+  $ git diff      # détail des changements
 
 Pour commiter les modifications indexées ::
 
@@ -379,11 +388,11 @@ Pour commiter les modifications indexées ::
 Consulter l'historique
 ----------------------
 
-* *Git Gui > Dépôt > Voir l'historique de toutes les branches*
+* Menu contextuel > *TortoiseGit* > *Show log*
 
   (cf. figure suivante)
 
-* ligne de commande :
+* En ligne de commande :
 
   - afficher la liste des commits ::
 
@@ -408,26 +417,12 @@ Depuis l'interface graphique
 Résumé des états possibles d'un fichier avec GIT
 ------------------------------------------------
 
-.. figure:: _static/git-states.png
-   :width: 50%
+.. figure:: _static/git-states.*
+   :width: 75%
 
-   Figure empruntée à git-scm.org_.
+   Figure inspirée de git-scm.org_.
 
 .. _git-scm.org: http://git-scm.com/
-
-
-.. rst-class:: exercice
-
-Exercice - Préambule
-````````````````````
-
-Lorsque vous utilisez GIT pour la première fois sur une machine,
-il peut être nécessaire de le configurer pour préciser votre nom d'utilisateur et votre adresse email,
-informations utilisées par GIT pour identifier vos commits.
-
-* En ligne de commande : les instructions vous seront données au moment nécessaire.
-* Dans GIT Gui, rendez-vous dans le menu Édition > Options,
-  et renseignez les deux premiers champs (colonne de droite).
 
 
 .. rst-class:: exercice
@@ -485,12 +480,14 @@ Dans les deux cas, vous risqueriez de perdre ces modifications
 Mise en œuvre
 +++++++++++++
 
-* *Git Gui > Branche > Charger (checkout)...*
+* Menu contextuel > *TortoiseGit* > *Switch/Checkout...*
 
-  - saisir une *Expression de révision*, puis
-  - valider en cliquant sur *Charger (checkout)*.
+  - cocher *Commit*,
+  - saisir une *Expression de révision* (cf. ci-après),
+  - le cas échéant, décocher *Create New Branch*,
+  - valider.
 
-* ligne de commande ::
+* En ligne de commande ::
 
   $ git checkout <revision>
 
@@ -561,13 +558,13 @@ qui peut être exprimée de multiples manières ::
 Retour au présent
 +++++++++++++++++
 
-* *Git Gui > Branche > Charger (checkout)...*
+* Menu contextuel > *TortoiseGit* > *Switch/Checkout...*
 
-  - cocher le bouton radio *Branche locale*,
-  - sélectionner ``master`` dans la liste, puis
-  - valider en cliquant sur *Charger (checkout)*.
+  - s'assurer que ``Branch`` est bien coché,
+  - s'assurer que ``master`` est bien sélectionné dans la liste correspondante,
+  - valider.
 
-* ligne de commande ::
+* En ligne de commande ::
 
   $ git checkout master
 
@@ -762,9 +759,11 @@ Mise en œuvre
 Afficher la liste des branches
 ------------------------------
 
-* Depuis l'interface graphique :
+* Dans les interfaces graphiques :
 
-  elle apparaît chaque fois qu'elle est nécessaire.
+  elle apparaît chaque fois qu'elle est nécessaire
+
+  (par exemple, dans la boite de dialogue *Switch/Checkout...* vue précédemment).
 
 * En ligne de commande ::
 
@@ -783,14 +782,13 @@ le sommet d'une *nouvelle* branche
 Depuis l'interface graphique
 ````````````````````````````
 
-*Git Gui > Branche > Créer...*
+Menu contextuel > *TortoiseGit* > *Create Branch...*
 
   - on doit choisir un nom pour la nouvelle branche ;
-  - on peut choisir au sommet de quelle branche la nouvelle sera créée
-    (section « révision initiale ») ;
-  - on peut également y saisir une *Expression de révision* pour la créer sur
-    un commit arbitraire ;
-  - si on laisse cochée la case *Charger (checkout) après création* (en bas)
+  - dans la section « Base on »,
+    on peut choisir sur quel commit la nouvelle sera créée
+    (par défaut: commit courrant ``HEAD``) ;
+  - si on  coche la case *Switch to new branch* (en bas à droite)
     la nouvelle branche deviendra la branche courante.
 
 
@@ -830,17 +828,14 @@ pour la mettre dans le même état que le sommet d'une branche.
 
 .. index:: git checkout
 
-Trois méthodes
+Mise en œuvre
 ``````````````
 
-* *Git Gui > Branche > Charger (checkout)...*
+* Menu contextuel > *TortoiseGit* > *Switch/Checkout...*
 
-  - cocher le bouton radio *Branche locale*,
-  - sélectionner la branche souhaitée dans la liste, puis
-  - valider en cliquant sur *Charger (checkout)*.
-
-* Depuis la vue historique, menu contextuel sur une branche :
-  *Récupérer cette branche*
+  - s'assurer que ``Branch`` est bien coché,
+  - sélectionner dans la liste correspondante le nom de la branche,
+  - valider.
 
 * En ligne de commande ::
 
@@ -930,14 +925,14 @@ ce commit devient le sommet de la branche destination.
 
 .. index:: git merge
 
-Deux méthodes
+Mise en œuvre
 `````````````
 
-* Git Gui > Fusionner > Fusion locale...*
+* Menu contextuel > *TortoiseGit* > *Merge...*
 
-  - cocher le bouton radio *Branche locale*,
+  - s'assurer que ``Branch`` est bien coché,
   - sélectionner la branche à fusionner dans la branche actuelle,
-  - valider en cliquant sur *Fusionner*.
+  - valider.
 
 * En ligne de commande ::
 
@@ -1101,13 +1096,23 @@ pour :
 
 Les fichiers binaires ne sont pas modifiés.
 
+
+.. index:: git commit
+
 Résolution du conflit
 ---------------------
 
 Une fois les fichiers en conflit corrigés,
-il suffit de faire un commit.
+on peut résoudre le conflit :
+
+* Menu contextuel > *TortoiseGit* > *Resolve...*
+
+* En ligne de commande ::
+
+  $ git commit -a
 
 Le nouveau commit aura pour parents les sommets des branches fusionnées.
+
 
 .. index:: git merge
 
@@ -1116,9 +1121,7 @@ Abandon
 
 On peut également décider d'abandonner la fusion :
 
-* *Git Gui > Fusionner > Abandonner fusion...*
-
-  - valider en cliquant sur *Oui*.
+* Menu contextuel > *TortoiseGit* > *Abort Merge*
 
 * En ligne de commande ::
 
@@ -1227,17 +1230,19 @@ Mise en œuvre
 Lier à un dépôt distant
 -----------------------
 
-À faire une fois pour toutes :
+* Menu contextuel > *TortoiseGit* > *Settings* > *Git* > *Remotes*
 
-* *Git Gui > Dépôt distant > Ajouter...*
-
-  - choisir un nom pour le dépôt distant,
-  - indiquer l'emplacement du dépôt distant,
-  - valider en cliquant sur *Ajouter*.
+  (interface complète de gestion des dépôts distants)
 
 * En ligne de commande ::
 
   $ git remote add <nom> <emplacement>
+
+.. hint::
+
+   Cette opération est à faire une seul fois par dépôt
+   (et par dépôt distant),
+   pour pouvoir ensuite interagir avec le dépôt distant.
 
 
 .. index:: git fetch
@@ -1245,13 +1250,17 @@ Lier à un dépôt distant
 Récupérer les commits distants
 ------------------------------
 
-À répéter régulièrement :
+.. todo déplacer cela dans la section "dépôt distant" à créer
 
-* *Git Gui > Dépôt distant > Récupérer de > <nom>*
+* Menu contextuel > *TortoiseGit* > *Fetch...*
+
+  - s'assurer que ``Remote`` est bien coché,
+  - s'assurer que ``origin`` est bien sélectionné dans la liste correspondante,
+  - valider.
 
 * En ligne de commande ::
 
-  $ git fetch <dépôt-distant>
+  $ git fetch origin
 
 .. hint::
 
@@ -1267,11 +1276,11 @@ Fusionner une branche de suivi
 
 Le principe est le même que pour la fusion entre branches locales.
 
-* Git Gui > Fusionner > Fusion locale...*
+* Menu contextuel > *TortoiseGit* > *Merge...*
 
-  - cocher le bouton radio *Branche de suivi*,
+  - s'assurer que ``Branch`` est bien coché,
   - sélectionner la branche de suivi à fusionner dans la branche actuelle,
-  - valider en cliquant sur *Fusionner*.
+  - valider.
 
 * En ligne de commande ::
 
@@ -1282,11 +1291,7 @@ Le principe est le même que pour la fusion entre branches locales.
 Publier des commits
 -------------------
 
-* Git Gui > Dépôts distants > Pousser...*
-
-  - sélectionner la branche locale contenant les commits à publier,
-  - sélectionner le dépôt distant vers lequel publier,
-  - valider en cliquant sur *Pousser*.
+* Menu contextuel > *TortoiseGit* > *Push...*
 
 * En ligne de commande ::
 
@@ -1307,9 +1312,14 @@ Cette opération est en fait un raccourci, qui
   - le lie au dépôt distant sous le nom ``origin``, et
   - récupère immédiatement les commits de l'origine.
 
-On peut l'effectuer :
+Mise en œuvre :
 
-* en lançant *Git Gui* hors d'une copie de travail, ou
+* Menu contextuel > *Git Clone...*
+
+  - dans le champs URL, sélectionner l'URL du dépôt distant ;
+  - le cas échéant, sélectionner l'emplacement (par défaut, répertoire courrant) ;
+  - valider.
+
 * en ligne de commande ::
 
   $ git clone <emplacement> <répertoire-destination>
@@ -1345,35 +1355,6 @@ Organisation pair-à-pair
 
 .. figure:: _static/collab_p2p.*
    :width: 90%
-
-.. index:: git init, git remote, git push
-
-Créer un dépôt public
----------------------
-
-* *Git Gui > Dépôt distant > Ajouter...*
-
-  - choisir le nom du dépôt distant,
-  - indiquer l'emplacement du dépôt public à créer,
-  - cocher le bouton radio *Initialiser un dépôt distant et pousser*
-  - valider en cliquant sur *Ajouter*.
-
-* En ligne de commande ::
-
-  $ git init --bare <emplacement>
-  $ git remote add <nom> <emplacement>
-  $ git push <nom> HEAD
-
-.. note::
-
-   L'emplacement choisi doit évidemment être accessible à d'autres,
-   par exemple sur un disque partagé.
-
-   La procédure d'initialisation du dépôt peut-être différente
-   si on utilise un service en réseau (par exemple github_).
-
-.. _github: http://github.com/
-
 
 .. rst-class:: exercice
 
@@ -1431,13 +1412,12 @@ il est possible de modifier (**amender**) le dernier commit créé.
 
 .. index:: git commit
 
-Deux méthodes
+Mise en œuvre
 -------------
 
-* Depuis l'interface graphique :
+* Dans la boite de dialogue de commit :
 
-  - cocher le bouton radio *Corriger dernier commit*
-    (au lieu de *Nouveau commit*).
+  - cocher le bouton radio *Amend last commit*
 
 * En ligne de commande ::
 
@@ -1459,10 +1439,10 @@ en re-créant les commits correspondants.
 
 .. index:: git rebase
 
-Une seule méthode
------------------
+Mise en œuvre
+-------------
 
-* À priori pas intégré à *Git Gui*
+* Menu contextuel > *TortoiseGit* > *Rebase...*
 
 * En ligne de commande (depuis la branche à « rebaser ») ::
 
@@ -1513,6 +1493,7 @@ Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT�
          :alt: Framagit
          :height: 2em
 
+.. _GitHub: https://github.com/
 .. _BitBucket: https://bitbucket.org/
 .. _Framagit: https://git.framasoft.org/
 .. _GitLab: https://gitlab.com/
