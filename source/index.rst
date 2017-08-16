@@ -430,26 +430,30 @@ Résumé des états possibles d'un fichier avec GIT
 Exercice
 ````````
 
-#. Ouvrez GIT Gui et créez un nouveau dépôt. Créez un nouveau répertoire via l'interface de GIT Gui puis observez le contenu du répertoire créé.
+#. Créez un nouveau répertoire, et faites-en un dépôt GIT.
 
-#. Avec un éditeur de texte, créez un fichier texte dans le répertoire, ajoutez du contenu à ce fichier, et sauvegardez-le.
+#. Ajoutez un fichier HTML dans ce répertoire,
+   contenant une brève description de vous
+   (ou de n'importe quel autre sujet qui vous intéresse).
+   Commitez ces changements.
 
-#. Dans l'interface GIT Gui, cliquez sur "Recharger modifs." Observez ce qui se passe.
+#. Ajoutez maintenant une feuille de style *externe* à votre fichier HTML,
+   (c'est à dire sous la forme d'un fichier CSS séparé,
+   référencé par une balise ``<link>``).
+   Commitez ces changements.
+
+#. Affichez l'historique de vos changements (selon votre méthode préférée).
 
 #. Entraînez-vous à faire des commits :
-   modifiez votre fichier texte, et sauvegardez-le,
-   utilisez l'interface de GIT Gui pour faire un commit des modifications,
-   et répétez l'opération plusieurs fois pour bien comprendre le processus.
+   modifiez le contenu du fichier HTML et/ou de la feuille de style,
+   ajoutez éventuellement d'autres fichiers (images par exemples).
+   À chaque changement,
+   commitez votre travail en rédigeant un message de commit suffisament explicite.
 
-#. Ajoutez maintenant quelques fichiers dans votre répertoire (fichiers textes, images, etc.) et assurez-vous de bien commiter ces nouveaux fichiers.
 
 .. note::
 
-   Il faut observer le .git. S'il n'apparaît pas, veiller à configurer l'explorateur de fichiers pour qu'il affiche es fichiers et dossiers cachés.
-
-..   * Créer votre projet GIT pour gérer votre CV en HTML
-..   * Faites plusieurs commit (par exemple, après avoir rempli chaque section)
-..   * Ajoutez des fichiers (par exemple, une photo, une feuille de style)
+   Il faut observer le .git. S'il n'apparaît pas, veiller à configurer l'explorateur de fichiers pour qu'il affiche les fichiers et dossiers cachés.
 
 
 .. _naviguer:
@@ -557,24 +561,19 @@ que nous étudierons un peu plus tard.
 
 .. rst-class:: exercice
 
-Exercices
----------
+Exercice
+--------
 
-   #. Naviguez dans l'historique de votre dépôt créé précédemment
-      en remontant par exemple 1, 5, 30 minutes en arrière.
+#. Naviguez dans l'historique du dépôt créé à l'exercice précédent,
+   pour afficher l'avant-dernière version de votre fichier HTML.
 
-   #. Lancez à nouveau GIT Gui et
-      `clonez <git-clone>`:ref: le repository suivant :
+#. Affichez ensuite l'antépénultième (avant-avant-dernière) version.
 
-   http://liris.cnrs.fr/~pchampin/enseignement/intro-git/historique-images/
+#. Affichez ensuite la deuxième version de votre fichier HTML.
 
-   Décrivez l'image que contient chacun des commits.
+#. Affichez ensuite la première version de votre fichier HTML.
 
-   .. note::
-
-      On verra plus tard en détail la notion de clonage.
-
-
+#. Revenez au "présent" (*i.e.* la dernière version).
 
 
 Entractes
@@ -842,6 +841,34 @@ Selon ses arguments, elle a des effets supplémentaires :
 
 .. index:: fusion, merge
 
+
+.. rst-class:: exercice
+
+Exercice
+--------
+
+#. Dans le dépôt que vous avez créé au premier exercice,
+   créez une branche nommée "style", et placez vous dans cette branche.
+
+#. Modifiez la feuille de style (par exemple pour changer la couleur de fond)
+   et commitez vos changements.
+
+#. Revenez sur la branche "master".
+   Constatez que vos changements de style ont disparu (pour l'instant).
+
+#. Dans la branche "master",
+   modifiez ou ajouter du contenu au fichier HTML,
+   et commitez vos modifications.
+
+#. Revenez sur la branche "style".
+   Constatez que vos changements de style ont réaparru,
+   mais que vos dernière modification dans le fichier HTML ont, elle, disparu.
+
+#. Modifiez à nouveau la feuille de style (par exemple pour changer la police)
+   et commitez vos changements.
+
+
+
 Fusionner deux branches
 -----------------------
 
@@ -926,37 +953,21 @@ Mise en œuvre
 Exercice
 ````````
 
-#. `Clonez <git-clone>`:ref: le dépôt suivant :
-   https://github.com/ameliecordier/tp-cv/
+#. Nous allons maintenant fusionner la branche "style"
+   (créée à l'exercice précédent)
+   avec la branche master.
 
-#. Visualisez l'historique des modifications sur ce dépôt.
+#. Placez-vous dans la branche "master",
+   et appliquez la méthode de votre choix
+   (ligne de commande ou GUI)
+   pour y fusionner la granche "style".
 
-#. Créez une nouvelle branche appelée "Amazon".
+#. Constatez que toutes vos modifications (contenu HTML et style)
+   sont maintenant visibles.
 
-#. Dans cette branche, modifiez ``CV.txt`` en ajoutant vos compétences en programmation.
+#. Constatez également (dans l'historique)
+   que le commit ainsi créé a *deux* commit parents.
 
-#. Revenez dans la branche master. L'ajout des compétences en programmation est-il toujours visible ?
-
-#. Dans la branche master, modifiez ``CV.txt`` en ajoutant vos compétences en bureautique.
-
-#. Fusionnez les modifications de la branche Amazon dans la branche master. La fusion s'est-elle bien passée ? A-t-elle donné lieu à un conflit ?
-
-   .. * Créez dans une branche ``candidature`` une variante de votre CV
-   ..  pour répondre à une offre de stage
-
-   ..  - (par exemple : changement de la feuille de style,
-        modifications mineures du texte).
-
-   .. * Revenez dans la branche ``master`` et complétez votre CV
-   ..   (par exemple, nouvelle expérience professionnelle).
-
-   .. * Plus tard, vous décidez de candidater à nouveau chez le même employeur ;
-   ..  fusionnez les modifications de ``master`` dans la branche ``candidature``.
-
-   .. TODO
-
-      fournir un projet contenant déjà une base de travail?
-      acordier : je pense que c'est fait :)
 
 .. _conflits:
 
@@ -1116,7 +1127,7 @@ On peut également décider d'abandonner la fusion :
 Exercice
 ````````
 
-#. Dans la branche master de votre dépôt CV, ajoutez un fichier nommé ``conflit.txt`` contenant le texte suivant :
+#. Créez un nouveau dépot, et ajoutez-y un fichier ``conflit.txt`` contenant le texte suivant :
 
    .. code-block:: diff
 
@@ -1124,11 +1135,14 @@ Exercice
       La deuxième ligne
       La troisième ligne
 
-#. Créez une nouvelle branche, modifiez les lignes 1 et 3 du fichier ``conflit.txt`` et commitez vos changements.
+#. Créez plusieurs branches,
+   dans lesquelles vous modifierez différemment le fichier ``conflit.txt``,
+   en suivant les exemples ci-avant.
+   Tentez ensuite de fusionner ces branches.
 
-#. Revenez à la branche master, modifiez les lignes 2 et 3 du fichier ``conflit.txt`` et commitez vos changements.
-
-#. Fusionnez la branche précédente dans la branche master. Que se passe-t-il ?
+#. Lorsque GIT vous signale un conflit,
+   constatez comment le fichier ``conflit.txt`` a été modifié,
+   et résolvez le conflit.
 
 
 
@@ -1337,6 +1351,7 @@ Organisation pair-à-pair
 
 .. figure:: _static/collab_p2p.*
    :width: 90%
+
 
 .. rst-class:: exercice
 
