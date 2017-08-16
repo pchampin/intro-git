@@ -1529,5 +1529,8 @@ Crédits
 
 Ce support a été réalisé par `Pierre-Antoine Champin`_ et `Amélie Cordier`_.
 
+Merci à Isabelle Goncalves et `Jocelyn Delalande`_ pour leurs contributions.
+
 .. _Pierre-Antoine Champin: http://champin.net/
 .. _Amélie Cordier: http://acordier.net/
+.. _Jocelyn Delalande: https://jocelyn.delalande.fr/
