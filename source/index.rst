@@ -1056,7 +1056,7 @@ Remarque
 
 .. warning:: La stratégie de GIT n'est qu'une heuristique.
 
-   Des branches jugées compatibles peuvent être sémantiquement incohérentes.
+   Cela signifie que des branches jugées compatibles par GIT peuvent être sémantiquement incohérentes.
    Il convient donc de vérifier le résultat de la fusion,
    même lorsqu'aucun conflit n'est signalé.
 
