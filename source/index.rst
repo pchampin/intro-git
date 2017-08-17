@@ -843,8 +843,6 @@ Selon ses arguments, elle a des effets supplémentaires :
 * une révision : passer en mode *detached HEAD*
 
 
-.. index:: fusion, merge
-
 
 .. rst-class:: exercice
 
@@ -872,6 +870,10 @@ Exercice
    et commitez vos changements.
 
 
+
+.. index:: fusion, merge
+
+.. _fusion:
 
 Fusionner deux branches
 -----------------------
