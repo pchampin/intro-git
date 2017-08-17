@@ -33,6 +33,8 @@
 
 .. role:: eng
 
+.. role:: lat
+
 .. role:: del
 
 
@@ -320,7 +322,7 @@ Création du dépôt
 Initialise la gestion de version dans un répertoire
 en créant le sous-répertoire ``.git``.
 
-Mise en œuvre :
+.. rubric:: Mise en œuvre
 
 * Dans le menu contextuel du répertoire concerné,
   *Git Create repository here...*
@@ -677,7 +679,7 @@ Illustration
 .. figure:: _static/branches_logiciel.*
    :width: 80%
 
-.. index:: branche, sommet, tip
+.. index:: branche, sommet, tip, master
 
 Notions
 +++++++
@@ -1098,6 +1100,8 @@ Les fichiers binaires ne sont pas modifiés.
 
 .. index:: git commit
 
+.. _résolution:
+
 Résolution du conflit
 ---------------------
 
@@ -1152,6 +1156,238 @@ Exercice
 
 
 
+.. _remote:
+
+Dépot distant
+=============
+
+.. index:: dépôt; distant, repository; remote
+
+Notion
+++++++
+
+Un **dépôt distant** (en anglais `remote repository`:eng:)
+est un dépôt GIT, tout à fait similaire à un dépôt local,
+mais acessible à distance `via`:lat: une URL.
+
+Exemple :  https://github.com/pchampin/intro-git.git
+
+Un dépôt local peut être lié à un dépôt distant ;
+GIT offre des fonctionnalités pour copier des commits de l'un à l'autre.
+
+.. note::
+
+   En fait, un dépôt distant n'est pas forcément « à distance »
+   (même si c'est le plus souvent le cas).
+   
+   On peut aussi utiliser comme dépôt distant un dépôt accessible dans un répertoire partagé,
+   ou sur un support amovible (clé USB, disque dûr externe)...
+
+Motivations
++++++++++++
+
+* sauvegarder le projet (fichiers + historique),
+* travailler sur plusieurs machines,
+* rendre le projet accessible à d'autres personnes,
+* travailler sur un projet publié par quelqu'un d'autre,
+* collaborer à plusieurs sur un projet
+  (ce sera l'objet du `chapitre suivant <collaboration>`:ref:).
+
+
+Vue d'ensemble
+++++++++++++++
+
+.. figure:: _static/git-states2.*
+   :width: 100%
+
+Mise en œuvre
++++++++++++++
+
+.. contents::
+   :local:
+   :depth: 0
+   :backlinks: none
+
+Créer un dépôt sur un serveur
+-----------------------------
+
+Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT :
+
+.. list-table::
+   :widths: 1 1
+   :class: logos
+
+   *
+    - .. image:: _static/github.png
+         :target: GitHub_
+         :alt: GitHub
+         :height: 2em
+
+    - .. image:: _static/bitbucket-logo-blue.png
+         :target: BitBucket_
+         :alt: BitBucket
+         :height: 2em
+   *
+    - .. image:: _static/logo-gitlab.png
+         :target: GitLab_
+         :alt: GitLab
+         :height: 2em
+
+    - .. image:: _static/logo-framagit.png
+         :target: Framagit_
+         :alt: Framagit
+         :height: 2em
+
+.. _GitHub: https://github.com/
+.. _BitBucket: https://bitbucket.org/
+.. _Framagit: https://git.framasoft.org/
+.. _GitLab: https://gitlab.com/
+
+dont un hébergé par l'IUT :
+
+.. rst-class:: logos
+
+   http://iutdoua-git.univ-lyon1.fr/
+
+
+.. _git-clone:
+.. index:: git clone, cloner
+
+Cloner un dépôt distant
+-----------------------
+
+Une fois votre dépôt distant créé, vous pouvez en faire un **clone**
+(une copie à la fois des fichiers et de l'historique)
+sous forme d'un dépôt local, qui sera lié à ce dépôt distant.
+
+.. rubric:: Mise en œuvre
+
+* Menu contextuel > *Git Clone...*
+
+  - dans le champs URL, sélectionner l'URL du dépôt distant ;
+  - le cas échéant, modifier l'emplacement du dépôt local ;
+  - valider.
+
+* en ligne de commande ::
+
+  $ git clone <url-dépôt-distant> <emplacement>
+
+.. note::
+
+   Il est possible de procéder à l'inverse :
+   commencer à travailler sur un dépôt local,
+   puis créer un dépôt distant pour publier le travail.
+
+   La procédure est un peu plus complexe,
+   mais est généralement bien documentée par les service d'hébergement GIT,
+   au moment ou vous créerez le dépôt distant.
+
+Problème depuis le campus Lyon1
+```````````````````````````````
+
+Si vous rencontrez des problèmes pour cloner un dépôt,
+cela peut venir d'une mauvaise configuration du *proxy*.
+Dans ``Git Bash``, tapez les deux commandes suivantes ::
+
+  $ git config --global http.proxy http://proxy.univ-lyon1.fr:3128
+  $ git config --global https.proxy https://proxy.univ-lyon1.fr:3128
+
+puis tentez à nouveau.
+
+
+.. index:: git push, pousser
+
+Publier des commits
+-------------------
+
+Cette opération copie sur le dépôt distant les commits locaux (de la branche courante)
+qui n'y sont pas encore présents.
+
+.. rubric:: Mise en œuvre
+
+* Menu contextuel > *TortoiseGit* > *Push...*
+
+* En ligne de commande ::
+
+  $ git push
+
+.. hint:: Cela suppose évidemment que vous soyez propriétaire du dépôt distant,
+	  ou que le propriétaire ait configuré sont dépôt pour vous donner autoriser à le modifier.
+
+Désynchronisation
+`````````````````
+
+Le ``push`` n'est possible que si la branche locale contient tous les commits présents dans la branche distante (plus, bien sûr, les nouveaux commits que vous voulez pousser).
+
+Si la branche distante contient des commits inconnus de votre dépôt local
+(poussés depuis une autre machine, par vous ou quelqu'un d'autre),
+il faudra au préalable les récupérer (cf. ci-après).
+
+
+.. index:: git pull, tirer
+
+.. _pull:
+
+Récupérer les commits
+---------------------
+
+Cette opération copie dans le dépôt local les commits distants (de la branche courante)
+qui n'y sont pas encore présent. *Elle met également à jour la copie de travail.*
+
+Cela est nécessaire
+
+* lorsque vous travaillez sur plusieurs machines,
+  et utilisez le dépôt distant pour les synchroniser, ou
+* lorsque le dépôt distant est modifié par quelqu'un d'autre.
+
+.. rubric:: Mise en œuvre
+
+* Menu contextuel > *TortoiseGit* > *Pull...*
+
+* En ligne de commande ::
+
+  $ git pull
+
+
+
+Désynchronisation
+`````````````````
+
+Dans le cas le plus simple, le dépôt distant est « en avance » par rapport au dépôt local :
+il contient tous les commits du dépôt local, plus ceux que vous cherchez à récupérer.
+
+Dans un cas plus complexe, des commits ont pû être ajoutés parallèlement dans les deux dépôts.
+Dans ce cas, ``pull`` effectue automatiquement une opération de `fusion <fusion>`:ref:.
+Cela peut entraîner un conflit, qu'il faudra résoudre comme vu
+`précédemment <résolution>`:ref:.
+
+.. hint::
+
+   Il est bien sûr préférable d'éviter ces conflits plutôt que de les résoudre
+   `a posteriori`:lat:.
+   Modifier la même information en parallèle n'est, de toute façon,
+   pas une bonne idée...
+
+.. rst-class:: exercice
+
+Exercice
+````````
+
+#. Créez un dépôt distant sur le service d'hébergement de votre choix.
+
+#. Clonez le dans un dépôt local
+
+#. Créez un fichier "message.txt" dans le dépôt local, commitez le et poussez le.
+
+#. Constatez que le fichier message.txt apparaît bien sur la page Web de votre dépôt distant.
+
+.. hint:: sur ``iutdoua-git``, utilisez l'URL HTTPS du dépôt distant.
+
+   Les URLs SSH sont bloquées pour des raisons de sécurité.
+
+
+.. _collaboration:
+
 Collaboration
 =============
 
@@ -1185,19 +1421,19 @@ Notions
 * On met en commun en fusionnant les branches.
 
 
-.. index:: dépôt; distant, repository; remote
+.. index:: dépôt; distant, repository; remote, git clone, origin
 
 Dépôt distant
 -------------
 
-Un dépôt peut être lié à d'autres dépôts dits **distants**
-(en anglais `remote repository`:eng:),
-avec lesquels il pourra partager des commits.
+On a vu dans la section précédente qu'un dépôt local pouvait être lié à un dépôt distant.
 
-Un dépôt distant a un emplacement qui peut être :
+En fait, un dépôt GIT peut être lié à un nombre arbitraire de dépôts distants,
+chacun identifié par un nom.
 
-* un répertoire (sur un disque local ou partagé), ou
-* une URL (par exemple http://github.com/pchampin/intro-git).
+Lors d'un ``clone``,
+le dépôt cloné est automatiquement ajouté comme dépôt distant,
+sous le nom ``origin``.
 
 
 .. index:: branche; de suivi, remote-tracking branch
@@ -1205,14 +1441,14 @@ Un dépôt distant a un emplacement qui peut être :
 Branche de suivi
 ----------------
 
-Pour chaque branche d'un dépôt distant,
+Pour chaque branche de chaque dépôt distant,
 GIT crée dans le dépôt local une branche spéciale appelée **branche de suivi**
-(en anglais `remote-tracking branch`:eng:). Leur nom est de la forme ::
+(en anglais `remote-tracking branch`:eng:). Son nom est de la forme ::
 
-  remotes/<dépôt-distant>/<branche>
+  <nom-dépôt-distant>/<branche>
 
 Cette branche reflète l'état de la branche distante correspondante ;
-elle n'a pas vocation a être modifiée directement.
+elle n'est jamais modifiée directement.
 
 Elle peut en revanche être *fusionnée* à une branche locale,
 afin d'y intégrer les modifications faites par d'autres.
@@ -1249,20 +1485,32 @@ Lier à un dépôt distant
 
 .. index:: git fetch
 
-Récupérer les commits distants
-------------------------------
+Mettre à jour les branches de suivi
+-----------------------------------
 
-.. todo déplacer cela dans la section "dépôt distant" à créer
+On a vu `précédemment <pull>`:ref: la commande ``git pull``
+qui récupère les commits distants *et les fusionne* dans la branche courante.
+
+La commande ``git fetch`` permet de simplement récupérer les commits distants et de mettre à jour les branches de suivi,
+*sans impacter* les branches locales.
+
+.. note::
+
+   En fait, ``git pull`` n'est ni plus ni moins un raccourci qui effectue un ``git fetch``
+   suivi d'un ``git merge``.
+
+Mise en œuvre
+`````````````
 
 * Menu contextuel > *TortoiseGit* > *Fetch...*
 
   - s'assurer que ``Remote`` est bien coché,
-  - s'assurer que ``origin`` est bien sélectionné dans la liste correspondante,
+  - sélectionner le dépôt distant souhaité la liste correspondante,
   - valider.
 
 * En ligne de commande ::
 
-  $ git fetch origin
+  $ git fetch <nom-dépôt-distant>
 
 .. hint::
 
@@ -1286,65 +1534,19 @@ Le principe est le même que pour la fusion entre branches locales.
 
 * En ligne de commande ::
 
-   $ git merge remotes/<branche-de-suivi>
+   $ git merge <branche-de-suivi>
 
-.. index:: git push, pousser
+.. index:: git push
 
-Publier des commits
--------------------
+.. rst-class:: exercice
 
-* Menu contextuel > *TortoiseGit* > *Push...*
-
-* En ligne de commande ::
-
-  $ git push <dépôt-distant> <branche-locale>
-
-.. hint:: Suppose d'avoir des droits en écriture sur le dépôt distant.
-
-
-.. _git-clone:
-.. index:: git clone, cloner
-
-Cloner un dépôt distant
------------------------
-
-Cette opération est en fait un raccourci, qui
-
-  - crée un nouveau dépôt local,
-  - le lie au dépôt distant sous le nom ``origin``, et
-  - récupère immédiatement les commits de l'origine.
-
-Mise en œuvre :
-
-* Menu contextuel > *Git Clone...*
-
-  - dans le champs URL, sélectionner l'URL du dépôt distant ;
-  - le cas échéant, sélectionner l'emplacement (par défaut, répertoire courrant) ;
-  - valider.
-
-* en ligne de commande ::
-
-  $ git clone <emplacement> <répertoire-destination>
-
-Remarque : le clone peut se faire selon plusieurs protocoles : HTTPS, SSH, etc.
-
-.. note:: Problème depuis le campus Lyon1
-
-  Si vous rencontrez des problèmes pour cloner un dépôt,
-  cela peut venir d'une mauvaise configuration du *proxy*.
-  Dans ``git bash``, tapez les deux commandes suivantes ::
-
-    git config --global http.proxy http://proxy.univ-lyon1.fr:3128
-    git config --global https.proxy https://proxy.univ-lyon1.fr:3128
-
-  puis tentez à nouveau.
 
 Types de collaborations
 +++++++++++++++++++++++
 
 La flexibilité de GIT permet de multiples formes d'organisation pour le travail collaboratif.
 
-On donne ici quelques exemples (non exhaustifs).
+On donne ici quelques exemples (non exhaustifs, et non exclusifs).
 
 Organisation en étoile
 ----------------------
@@ -1352,11 +1554,52 @@ Organisation en étoile
 .. figure:: _static/collab_star.*
    :width: 90%
 
+.. note::
+
+   Ce type de collaboration est inspiré des |VCS| centralisés,
+   et est simple à mettre en œuvre.
+
+   Il suppose de mettre un place un unique `dépôt distant <remote>`_
+   sur lequel plusieurs collaborateurs ont les droits en écriture.
+
 Organisation pair-à-pair
 ------------------------
 
 .. figure:: _static/collab_p2p.*
    :width: 90%
+
+.. note::
+
+   Ce type de collaboration est très flexible.
+   On peut notamment le mettre en œuvre sans disposer d'un serveur,
+   en utilisant par exemple des média amovibles (clé USB, carte DS, disque externe...)
+   comme "dépot distant" pour communiquer entre les différents acteurs.
+
+
+Organisation "github"
+---------------------
+
+.. figure:: _static/collab_github.*
+   :width: 90%
+
+.. note::
+
+   Ce type de collaboration est encouragé par les sites d'hébergement comme Github_
+   (mais également d'autres).
+
+   Chaque collaborateur dispose d'un clone public du projet,
+   et y publie les commits qu'il souhaite partager.
+
+   Il sollicite ensuite les autres collaborateur pour tirer ces commits dans leur propre dépôt/
+   On appelle cette sollicitation un `pull request`:eng:
+   (ou plus rarement un `merge request`:eng:).
+
+   La plupart du temps,
+   l'un des dépôts publics (celui du leader du projet, typiquement)
+   est considéré comme la référence,
+   donc ce type d'organisation se rapproche de l'organisation en étoile,
+   mais permet à n'importe qui de proposer des modifications,
+   sans avoir besoin d'obtenir les droits en écriture sur le dépôt de référence.
 
 
 .. rst-class:: exercice
@@ -1465,51 +1708,6 @@ __ http://pcottle.github.io/learnGitBranching/
 __ https://onlywei.github.io/explain-git-with-d3/#
 
 * Si vous voulez en savoir plus sur GIT, consultez son excellente documentation sur git-scm.org_ ainsi que les vidéos très instructives !
-
-Collaborer avec GIT
-+++++++++++++++++++
-
-Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT :
-
-.. list-table::
-   :widths: 1 1
-   :class: logos
-
-   *
-    - .. image:: _static/github.png
-         :target: GitHub_
-         :alt: GitHub
-         :height: 2em
-
-    - .. image:: _static/bitbucket-logo-blue.png
-         :target: BitBucket_
-         :alt: BitBucket
-         :height: 2em
-   *
-    - .. image:: _static/logo-gitlab.png
-         :target: GitLab_
-         :alt: GitLab
-         :height: 2em
-
-    - .. image:: _static/logo-framagit.png
-         :target: Framagit_
-         :alt: Framagit
-         :height: 2em
-
-.. _GitHub: https://github.com/
-.. _BitBucket: https://bitbucket.org/
-.. _Framagit: https://git.framasoft.org/
-.. _GitLab: https://gitlab.com/
-
-dont un hébergé par l'IUT :
-
-.. rst-class:: logos
-
-   http://iutdoua-git.univ-lyon1.fr/
-
-N'hésitez pas à visiter ces sites et à explorer les projets qui s'y trouvent...
-C'est une grande source d'inspiration.
-
 
 
 Autres outils de gestion de version
