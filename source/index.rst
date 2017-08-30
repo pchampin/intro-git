@@ -852,7 +852,7 @@ Exercice
 --------
 
 #. Dans le dépôt que vous avez créé au premier exercice,
-   créez une branche nommée ``style``, et placez vous dans cette branche.
+   créez une branche nommée ``style``, et placez-vous dans cette branche.
 
 #. Modifiez la feuille de style (par exemple pour changer la couleur de fond)
    et commitez vos changements.
@@ -861,12 +861,12 @@ Exercice
    Constatez que vos changements de style ont disparu (pour l'instant).
 
 #. Dans la branche ``master``,
-   modifiez ou ajouter du contenu au fichier HTML,
+   modifiez ou ajoutez du contenu au fichier HTML,
    et commitez vos modifications.
 
 #. Revenez sur la branche ``style``.
    Constatez que vos changements de style ont réapparu,
-   mais que vos dernière modification dans le fichier HTML ont, elle, disparu.
+   mais que vos dernières modifications dans le fichier HTML ont, elles, disparu.
 
 #. Modifiez à nouveau la feuille de style (par exemple pour changer la police)
    et commitez vos changements.
@@ -967,8 +967,8 @@ Exercice
 
 #. Placez-vous dans la branche ``master``,
    et appliquez la méthode de votre choix
-   (ligne de commande ou GUI)
-   pour y fusionner la granche ``style``.
+   (ligne de commande ou interface graphique)
+   pour y fusionner la branche ``style``.
 
 #. Constatez que toutes vos modifications (contenu HTML et style)
    sont maintenant visibles.
@@ -1279,8 +1279,8 @@ sous forme d'un dépôt local, qui sera lié à ce dépôt distant.
    puis créer un dépôt distant pour publier le travail.
 
    La procédure est un peu plus complexe,
-   mais est généralement bien documentée par les service d'hébergement GIT,
-   au moment ou vous créerez le dépôt distant.
+   mais est généralement bien documentée par les services d'hébergement GIT,
+   au moment où vous créerez le dépôt distant.
 
 Problème depuis le campus Lyon1
 ```````````````````````````````
@@ -1312,7 +1312,7 @@ qui n'y sont pas encore présents.
   $ git push
 
 .. hint:: Cela suppose évidemment que vous soyez propriétaire du dépôt distant,
-	  ou que le propriétaire ait configuré sont dépôt pour vous donner autoriser à le modifier.
+	  ou que le propriétaire ait configuré son dépôt pour vous autoriser à le modifier.
 
 Désynchronisation
 `````````````````
@@ -1332,7 +1332,7 @@ Récupérer les commits
 ---------------------
 
 Cette opération copie dans le dépôt local les commits distants (de la branche courante)
-qui n'y sont pas encore présent. *Elle met également à jour la copie de travail.*
+qui n'y sont pas encore présents. *Elle met également à jour la copie de travail.*
 
 Cela est nécessaire
 
@@ -1748,7 +1748,7 @@ Crédits
 
 Ce support a été réalisé par `Pierre-Antoine Champin`_ et `Amélie Cordier`_.
 
-Merci à Isabelle Goncalves et `Jocelyn Delalande`_ pour leurs contributions.
+Merci à Isabelle Gonçalves et `Jocelyn Delalande`_ pour leurs contributions.
 
 .. _Pierre-Antoine Champin: http://champin.net/
 .. _Amélie Cordier: http://acordier.net/
