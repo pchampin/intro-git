@@ -1601,6 +1601,11 @@ Organisation "github"
    mais permet à n'importe qui de proposer des modifications,
    sans avoir besoin d'obtenir les droits en écriture sur le dépôt de référence.
 
+   Notons aussi que les plateformes (Github_, GitLab_)
+   offrent des facilités pour partager des commits directement entre des dépôts publics
+   (`fork`:eng:, accepter un `pull request`:eng:),
+   mais conceptuellement, ces opérations reviennent à des ``fetch`` ou des ``pull``.
+
 
 .. rst-class:: exercice
 
