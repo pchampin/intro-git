@@ -1243,11 +1243,11 @@ Il existe plusieurs sites permettant d'héberger et de partager vos projets GIT�
 .. _Framagit: https://git.framasoft.org/
 .. _GitLab: https://gitlab.com/
 
-dont un hébergé par l'IUT :
+dont un hébergé par l'université Lyon 1 :
 
 .. rst-class:: logos
 
-   http://iutdoua-git.univ-lyon1.fr/
+   http://forge.univ-lyon1.fr/
 
 
 .. _git-clone:
@@ -1380,10 +1380,6 @@ Exercice
 #. Créez un fichier "message.txt" dans le dépôt local, commitez le et poussez le.
 
 #. Constatez que le fichier message.txt apparaît bien sur la page Web de votre dépôt distant.
-
-.. hint:: sur ``iutdoua-git``, utilisez l'URL HTTPS du dépôt distant.
-
-   Les URLs SSH sont bloquées pour des raisons de sécurité.
 
 
 .. _collaboration:
