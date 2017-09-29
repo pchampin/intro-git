@@ -1249,6 +1249,14 @@ dont un hébergé par l'université Lyon 1 :
 
    http://forge.univ-lyon1.fr/
 
+.. note::
+
+   Concernant la forge de Lyon 1,
+   en cas de problème avec les certificats SSL,
+   consultez cette `FAQ`_
+
+.. _FAQ: https://forge.univ-lyon1.fr/EMMANUEL.COQUERY/forge/wikis/FAQ
+
 
 .. _git-clone:
 .. index:: git clone, cloner
