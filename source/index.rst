@@ -699,7 +699,7 @@ Notions
 
 .. note::
 
-   Par « lignée », on entends :
+   Par « lignée », on entend :
    l'ensemble des commits ancêtres du sommet de la branche.
 
    Dans le cas simple, cette lignée a une structure linéaire,
