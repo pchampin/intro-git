@@ -216,11 +216,6 @@ et possèdent :
 
 On parle également de **révision**.
 
-.. note::
-
-  GIT fait une distinction subtile entre `revision`:eng:, `commit`:eng: et
-  `commit object`:eng: mais elle n'est pas utile ici.
-
 
 Illustration
 ````````````
