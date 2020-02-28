@@ -14,7 +14,7 @@
    height="241.88976"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="collab_github.svg"
    viewBox="0 0 396.85037 226.77165">
   <defs
@@ -1397,6 +1397,26 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient33578"
+       id="linearGradient5464"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(3.7459934,535.53215,-1293.4424)"
+       x1="209.24976"
+       y1="943.81226"
+       x2="279.96451"
+       y2="939.18231" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient33578"
+       id="linearGradient5537"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(3.7459934,535.53215,-1293.4424)"
+       x1="209.24976"
+       y1="943.81226"
+       x2="279.96451"
+       y2="939.18231" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1406,17 +1426,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.551907"
-     inkscape:cx="130.21475"
-     inkscape:cy="129.56407"
+     inkscape:cx="199.42264"
+     inkscape:cy="156.71935"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5109-9-90-1"
      showgrid="true"
      units="cm"
      borderlayer="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1353"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="41"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="false"
      inkscape:snap-bbox="false"
@@ -2498,7 +2518,7 @@
       </g>
     </g>
     <g
-       transform="translate(28.242902,-56.692925)"
+       transform="translate(28.346458,-42.519696)"
        id="g5101-8-8">
       <path
          style="fill:url(#linearGradient2003);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.25098039"
@@ -2991,7 +3011,7 @@
            id="tspan4662-9-1">personal repo</tspan></text>
     </g>
     <g
-       transform="matrix(-1,0,0,1,354.43426,-56.692925)"
+       transform="matrix(-1,0,0,1,354.3307,-42.519696)"
        id="g5101-8-8-4">
       <path
          style="fill:url(#linearGradient2682);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.25098039"
@@ -3125,8 +3145,59 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.7086615;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.12598432, 2.12598432;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend-0)"
-       d="M 269.29134,868.10888 V 919.541"
+       d="m 269.29134,882.28211 0,37.25889"
        id="path5942-3"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       transform="translate(28.346453,-70.866153)"
+       id="g5109-9-90">
+      <path
+         style="fill:url(#linearGradient5464);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 63.779528,917.71519 14.17323,-14.17322 v 7.08661 h 42.519682 v 14.17323 H 77.952758 v 7.08661 z"
+         id="path5111-0-68"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="94.94622"
+         y="920.60388"
+         id="text5113-8-7"><tspan
+           sodipodi:role="line"
+           id="tspan5115-8-9"
+           x="94.94622"
+           y="920.60388"
+           style="font-size:10px;line-height:1.25;font-family:sans-serif">fork<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+   id="tspan5500"> (clone)</tspan></tspan></text>
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,354.1236,-70.866154)"
+       id="g5109-9-90-3" />
+    <g
+       transform="matrix(-1,0,0,1,354.1236,-70.866154)"
+       id="g5109-9-90-1">
+      <path
+         style="fill:url(#linearGradient5537);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 63.779528,917.71519 14.17323,-14.17322 v 7.08661 h 42.519682 v 14.17323 H 77.952758 v 7.08661 z"
+         id="path5111-0-68-7"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="-94.527519"
+         y="920.60388"
+         id="text5113-8-7-4"
+         transform="scale(-1,1)"><tspan
+           sodipodi:role="line"
+           id="tspan5115-8-9-1"
+           x="-94.527519"
+           y="920.60388"
+           style="font-size:10px;line-height:1.25;font-family:sans-serif">fork<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+   id="tspan5500-7"> (clone)</tspan></tspan></text>
+    </g>
   </g>
 </svg>

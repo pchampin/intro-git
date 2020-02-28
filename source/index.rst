@@ -1586,7 +1586,7 @@ Organisation "github"
    Ce type de collaboration est encouragé par les sites d'hébergement comme Github_
    (mais également d'autres).
 
-   Chaque collaborateur dispose d'un clone public du projet,
+   Chaque collaborateur dispose d'un clone public (*fork*) du projet,
    et y publie les commits qu'il souhaite partager.
 
    Il sollicite ensuite les autres collaborateur pour tirer ces commits dans leur propre dépôt/
